@@ -15,39 +15,38 @@
 
 FROM alpine:3.9 as dev
 
-RUN apk add --no-cache \
-        alsa-lib-dev \
-        aspell \
-        aspell-en \
-        autoconf \
-        automake \
-        build-base \
-        curl \
-        dpkg \
-        dpkg-dev \
-        fontconfig-dev \
-        gawk \
-        gconf-dev \
-        giflib-dev \
-        git \
-        glib-dev \
-        gnupg \
-        gnutls-dev \
-        gtk+3.0-dev \
-        libcanberra-gtk3 \
-        libjpeg-turbo-dev \
-        libpng-dev \
-        librsvg-dev \
-        libxaw-dev \
-        libxml2-dev \
-        ncurses-dev \
-        openssh-client \
-        pango-dev \
-        paxmark \
-        python \
-        texinfo \
-        tiff-dev \
-    && /bin/true
+RUN apk update && apk upgrade
+RUN apk add build-base
+RUN apk add alsa-lib-dev
+RUN apk add aspell
+RUN apk add aspell-en
+RUN apk add autoconf
+RUN apk add automake
+RUN apk add curl
+RUN apk add dpkg
+RUN apk add dpkg-dev
+RUN apk add fontconfig-dev
+RUN apk add gawk
+RUN apk add gconf-dev
+RUN apk add giflib-dev
+RUN apk add git
+RUN apk add glib-dev
+RUN apk add gnupg
+RUN apk add gnutls-dev
+RUN apk add gtk+3.0-dev
+RUN apk add libcanberra-gtk3
+RUN apk add libjpeg-turbo-dev
+RUN apk add libpng-dev
+RUN apk add librsvg-dev
+RUN apk add libxaw-dev
+RUN apk add libxml2-dev
+RUN apk add ncurses-dev
+RUN apk add openssh-client
+RUN apk add pango-dev
+RUN apk add paxmark
+RUN apk add python
+RUN apk add texinfo
+RUN apk add tiff-dev
 
 ENV EMACS_BRANCH="master"
 ENV EMACS_VERSION="master"
