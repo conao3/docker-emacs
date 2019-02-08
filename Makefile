@@ -8,9 +8,6 @@ DIRS := .make
 
 all: build
 
-$(DIRS):
-	mkdir -p $@
-
 build: $(DIRS) emacs .make/build-alpine-26.1-min
 	@:
 
@@ -27,6 +24,9 @@ push: build
 
 emacs:
 	git clone https://git.savannah.gnu.org/git/emacs.git
+
+$(DIRS):
+	mkdir -p $@
 
 disable-aslr:
 	echo 0 > /proc/sys/kernel/randomize_va_space
