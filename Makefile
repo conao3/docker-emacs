@@ -16,14 +16,11 @@ push: build
 
 ##############################
 
-.make/build-%: Dockerfiles/Dockerfile-% $(DIRS) emacs
+.make/build-%: Dockerfiles/Dockerfile-% $(DIRS)
 	docker image build -t conao3/emacs:$* -f $< .
 	touch $@
 
 ##################################################
-
-emacs:
-	git clone https://git.savannah.gnu.org/git/emacs.git
 
 $(DIRS):
 	mkdir -p $@
