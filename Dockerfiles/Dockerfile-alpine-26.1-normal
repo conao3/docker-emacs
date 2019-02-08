@@ -77,7 +77,6 @@ RUN apk add tiff
 RUN apk add desktop-file-utils
 
 RUN apk add gconf
-
 RUN apk add alsa-lib
 
 COPY --from=0 /usr/local /usr/local
