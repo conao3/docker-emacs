@@ -64,11 +64,10 @@ FROM alpine:3.9
 
 RUN apk update && apk upgrade
 RUN apk add gtk+3.0
+RUN apk add libcanberra-gtk3
 
 RUN apk add curl
 RUN apk add gnupg
-RUN apk add libcanberra-gtk3
-
 RUN apk add openssh-client
 
 RUN apk add librsvg
