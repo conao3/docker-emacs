@@ -17,6 +17,9 @@ FROM alpine:3.9 as dev
 
 RUN apk update && apk upgrade
 RUN apk add alpine-sdk
+
+RUN git clone --depth 1 --branch emacs-26.1 https://git.savannah.gnu.org/git/emacs.git /opt/emacs
+
 RUN apk add gtk+3.0-dev
 RUN apk add libcanberra-gtk3
 RUN apk add ncurses-dev
@@ -48,10 +51,9 @@ RUN apk add alsa-lib-dev
 ENV EMACS_BRANCH="master"
 ENV EMACS_VERSION="master"
 
-COPY emacs /opt/emacs/
+WORKDIR /opt/emacs
 
-RUN cd /opt/emacs && \
-    if [ -d patches ]; then git apply patches/*; fi && \
+RUN if [ -d patches ]; then git apply patches/*; fi && \
     ./autogen.sh && \
     ./configure && \
     make -j 8 install
