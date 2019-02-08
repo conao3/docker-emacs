@@ -19,19 +19,19 @@ install:
   - docker version
   - make .make/build-alpine-26.1-min
 
-after_success:
-  - |
-    # DOCKER_USERNAME is empty for forked repositories
-    # TRAVIS_PULL_REQUEST is "true" for pull requests
-    # TRAVIS_BRANCH is the current branch or the PR target branch
-    # TRAVIS_PULL_REQUEST_BRANCH is the PR source branch
-    github_branch="${TRAVIS_PULL_REQUEST_BRANCH:-$TRAVIS_BRANCH}"
-    if [[ ! -z "$DOCKER_USERNAME" ]] && [[ "$TRAVIS_PULL_REQUEST" != "true" ]] && \
-       [[ "$github_branch" == "master" ]] || [[ "$github_branch" == "staging-"* ]]; then
-      images push $DOCKER_IMAGES
-    else
-      echo ">>> not pushing"
-    fi
+# after_success:
+#   - |
+#     # DOCKER_USERNAME is empty for forked repositories
+#     # TRAVIS_PULL_REQUEST is "true" for pull requests
+#     # TRAVIS_BRANCH is the current branch or the PR target branch
+#     # TRAVIS_PULL_REQUEST_BRANCH is the PR source branch
+#     github_branch="${TRAVIS_PULL_REQUEST_BRANCH:-$TRAVIS_BRANCH}"
+#     if [[ ! -z "$DOCKER_USERNAME" ]] && [[ "$TRAVIS_PULL_REQUEST" != "true" ]] && \
+#        [[ "$github_branch" == "master" ]] || [[ "$github_branch" == "staging-"* ]]; then
+#       images push $DOCKER_IMAGES
+#     else
+#       echo ">>> not pushing"
+#     fi
 
 notifications:
   email:
