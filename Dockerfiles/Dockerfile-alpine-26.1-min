@@ -32,13 +32,13 @@ RUN apk add gnutls-dev
 
 RUN apk add paxmark
 
+RUN apk add libxml2-dev
 RUN apk add libjpeg-turbo-dev
 RUN apk add libpng-dev
 RUN apk add librsvg-dev
 RUN apk add libxaw-dev
-RUN apk add libxml2-dev
-RUN apk add tiff-dev
 RUN apk add giflib-dev
+RUN apk add tiff-dev
 
 RUN apk add dpkg-dev
 RUN apk add gconf-dev
@@ -71,9 +71,9 @@ RUN apk add libcanberra-gtk3
 
 RUN apk add openssh-client
 
+RUN apk add librsvg
 RUN apk add libxpm
 RUN apk add giflib
-RUN apk add librsvg
 RUN apk add tiff
 
 RUN apk add desktop-file-utils
