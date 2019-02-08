@@ -26,7 +26,6 @@ RUN apk add automake
 RUN apk add texinfo
 
 RUN apk add gawk
-RUN apk add curl
 RUN apk add openssh-client
 RUN apk add gnupg
 RUN apk add gnutls-dev
@@ -43,19 +42,15 @@ RUN apk add giflib-dev
 
 RUN apk add aspell
 RUN apk add aspell-en
-RUN apk add dpkg
 RUN apk add dpkg-dev
-RUN apk add fontconfig-dev
 RUN apk add gconf-dev
-RUN apk add glib-dev
 RUN apk add pango-dev
-RUN apk add python
 RUN apk add alsa-lib-dev
 
 ENV EMACS_BRANCH="master"
 ENV EMACS_VERSION="master"
 
-COPY source /opt/emacs/
+COPY emacs /opt/emacs/
 
 RUN cd /opt/emacs && \
     if [ -d patches ]; then git apply patches/*; fi && \
