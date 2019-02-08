@@ -16,7 +16,7 @@ push: build
 
 ##############################
 
-.make/build-%: $(DIRS) emacs Dockerfiles/Dockerfile-%
+.make/build-%: Dockerfiles/Dockerfile-% $(DIRS) emacs
 	docker image build -t conao3/emacs:$* -f $< .
 	touch $@
 
