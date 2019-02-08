@@ -16,37 +16,41 @@
 FROM alpine:3.9 as dev
 
 RUN apk update && apk upgrade
-RUN apk add build-base
-RUN apk add alsa-lib-dev
-RUN apk add aspell
-RUN apk add aspell-en
-RUN apk add autoconf
-RUN apk add automake
-RUN apk add curl
-RUN apk add dpkg
-RUN apk add dpkg-dev
-RUN apk add fontconfig-dev
-RUN apk add gawk
-RUN apk add gconf-dev
-RUN apk add giflib-dev
-RUN apk add git
-RUN apk add glib-dev
-RUN apk add gnupg
-RUN apk add gnutls-dev
+RUN apk add alpine-sdk
 RUN apk add gtk+3.0-dev
 RUN apk add libcanberra-gtk3
+RUN apk add ncurses-dev
+
+RUN apk add autoconf
+RUN apk add automake
+RUN apk add texinfo
+
+RUN apk add gawk
+RUN apk add curl
+RUN apk add openssh-client
+RUN apk add gnupg
+RUN apk add gnutls-dev
+
+RUN apk add paxmark
+
 RUN apk add libjpeg-turbo-dev
 RUN apk add libpng-dev
 RUN apk add librsvg-dev
 RUN apk add libxaw-dev
 RUN apk add libxml2-dev
-RUN apk add ncurses-dev
-RUN apk add openssh-client
-RUN apk add pango-dev
-RUN apk add paxmark
-RUN apk add python
-RUN apk add texinfo
 RUN apk add tiff-dev
+RUN apk add giflib-dev
+
+RUN apk add aspell
+RUN apk add aspell-en
+RUN apk add dpkg
+RUN apk add dpkg-dev
+RUN apk add fontconfig-dev
+RUN apk add gconf-dev
+RUN apk add glib-dev
+RUN apk add pango-dev
+RUN apk add python
+RUN apk add alsa-lib-dev
 
 ENV EMACS_BRANCH="master"
 ENV EMACS_VERSION="master"
@@ -68,22 +72,27 @@ CMD ["emacs"]
 
 FROM alpine:3.9
 
-RUN apk add --no-cache \
-        alsa-lib \
-        aspell \
-        aspell-en \
-        curl \
-        desktop-file-utils \
-        gconf \
-        giflib \
-        gnupg \
-        gtk+3.0 \
-        libcanberra-gtk3 \
-        librsvg \
-        libxpm \
-        openssh-client \
-        tiff \
-    && /bin/true
+RUN apk update && apk upgrade
+RUN apk add gtk+3.0
+
+RUN apk add curl
+RUN apk add gnupg
+RUN apk add libcanberra-gtk3
+
+RUN apk add openssh-client
+
+RUN apk add libxpm
+RUN apk add giflib
+RUN apk add librsvg
+RUN apk add tiff
+
+RUN apk add desktop-file-utils
+
+RUN apk add gconf
+
+RUN apk add alsa-lib
+RUN apk add aspell
+RUN apk add aspell-en
 
 ENV EMACS_BRANCH="master"
 ENV EMACS_VERSION="master"
