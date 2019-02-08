@@ -48,9 +48,6 @@ RUN apk add gconf-dev
 RUN apk add pango-dev
 RUN apk add alsa-lib-dev
 
-ENV EMACS_BRANCH="master"
-ENV EMACS_VERSION="master"
-
 WORKDIR /opt/emacs
 
 RUN if [ -d patches ]; then git apply patches/*; fi && \
@@ -82,9 +79,6 @@ RUN apk add desktop-file-utils
 RUN apk add gconf
 
 RUN apk add alsa-lib
-
-ENV EMACS_BRANCH="master"
-ENV EMACS_VERSION="master"
 
 COPY --from=0 /usr/local /usr/local
 
