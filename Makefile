@@ -8,7 +8,7 @@ DIRS := .make
 
 all: build
 
-build: $(DIRS) emacs .make/build-alpine-26.1-min
+build: .make/build-alpine-26.1-min
 	@:
 
 push: build
@@ -16,7 +16,7 @@ push: build
 
 ##############################
 
-.make/build-%: Dockerfiles/Dockerfile-%
+.make/build-%: $(DIRS) emacs Dockerfiles/Dockerfile-%
 	docker image build -t conao3/emacs:$* -f $< .
 	touch $@
 
