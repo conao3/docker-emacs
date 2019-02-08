@@ -6,12 +6,12 @@ DIRS := .make
 
 ##################################################
 
-all: $(DIRS) build
+all: build
 
 $(DIRS):
 	mkdir -p $@
 
-build: emacs .make/build-alpine-26.1-min
+build: $(DIRS) emacs .make/build-alpine-26.1-min
 	@:
 
 push: build
