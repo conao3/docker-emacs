@@ -1,0 +1,5 @@
+# conao3's global .gitignore at
+# http://dotfiles.conao3.com/gitignore
+
+# emacs raw source
+source
