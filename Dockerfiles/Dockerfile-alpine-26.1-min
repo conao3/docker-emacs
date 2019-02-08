@@ -40,8 +40,6 @@ RUN apk add libxml2-dev
 RUN apk add tiff-dev
 RUN apk add giflib-dev
 
-RUN apk add aspell
-RUN apk add aspell-en
 RUN apk add dpkg-dev
 RUN apk add gconf-dev
 RUN apk add pango-dev
@@ -83,8 +81,6 @@ RUN apk add desktop-file-utils
 RUN apk add gconf
 
 RUN apk add alsa-lib
-RUN apk add aspell
-RUN apk add aspell-en
 
 ENV EMACS_BRANCH="master"
 ENV EMACS_VERSION="master"
