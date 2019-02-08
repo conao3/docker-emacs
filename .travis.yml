@@ -7,10 +7,10 @@ addons:
 
 services: docker
 
-cache:
-  timeout: 900
-  directories:
-    - $HOME/cache
+# cache:
+#   timeout: 900
+#   directories:
+#     - $HOME/cache
 
 env:
 #  - DOCKER_IMAGES="master-dev master"
