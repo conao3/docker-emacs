@@ -1,5 +1,7 @@
 TAG := latest
 
+##################################################
+
 build: emacs .make-build-alpine-26.1-min
 	@:
 
@@ -8,6 +10,8 @@ build: emacs .make-build-alpine-26.1-min
 
 push: build
 	docker push conao3/po4a:$(TAG)
+
+##################################################
 
 emacs:
 	git clone https://git.savannah.gnu.org/git/emacs.git
