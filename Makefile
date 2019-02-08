@@ -3,8 +3,8 @@ TAG := latest
 build: emacs .make-build-alpine-26.1-min
 	@:
 
-.make-build-%: Dockerfile/Dockerfile-%
-	docker image build -t conao3/emacs:$@ -f $< .
+.make-build-%: Dockerfiles/Dockerfile-%
+	docker image build -t conao3/emacs:$* -f $< .
 
 push: build
 	docker push conao3/po4a:$(TAG)
