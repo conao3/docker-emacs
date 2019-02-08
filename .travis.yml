@@ -13,30 +13,11 @@ services: docker
 #     - $HOME/cache
 
 env:
-#  - DOCKER_IMAGES="master-dev master"
   - DOCKER_IMAGES="master-alpine-dev master-alpine"
-#  - DOCKER_IMAGES="26.2-dev 26.2"
-#  - DOCKER_IMAGES="26.2-alpine-dev 26.2-alpine"
-#  - DOCKER_IMAGES="26.1-dev 26.1"
-#  - DOCKER_IMAGES="26.1-alpine-dev 26.1-alpine"
-#  - DOCKER_IMAGES="25.3-dev 25.3"
-#  - DOCKER_IMAGES="25.3-alpine-dev 25.3-alpine"
-#  - DOCKER_IMAGES="25.2-dev 25.2"
-#  - DOCKER_IMAGES="25.2-alpine-dev 25.2-alpine"
-#  - DOCKER_IMAGES="25.1-dev 25.1"
-#  - DOCKER_IMAGES="24.5-dev 24.5"
-#  - DOCKER_IMAGES="24.4-dev 24.4"
-#  - DOCKER_IMAGES="24.3-dev 24.3"
-#  - DOCKER_IMAGES="24.2-dev 24.2"
-#  - DOCKER_IMAGES="24.1-dev 24.1"
-#  - DOCKER_IMAGES="23.4-dev 23.4"
 
 install:
   - docker version
-  - source bin/setup-env
-  - travis_retry images prepare $DOCKER_IMAGES
-  - travis_retry images build $DOCKER_IMAGES
-  - images test $DOCKER_IMAGES
+  - make .make/build-alpine-26.1-min
 
 after_success:
   - |
