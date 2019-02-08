@@ -1,8 +1,17 @@
+all:
+
 TAG := latest
+
+DIRS := .make
 
 ##################################################
 
-build: emacs .make-build-alpine-26.1-min
+all: $(DIRS) build
+
+$(DIRS):
+	mkdir -p $@
+
+build: emacs .make/build-alpine-26.1-min
 	@:
 
 push: build
@@ -10,8 +19,9 @@ push: build
 
 ##############################
 
-.make-build-%: Dockerfiles/Dockerfile-%
+.make/build-%: Dockerfiles/Dockerfile-%
 	docker image build -t conao3/emacs:$* -f $< .
+	touch $@
 
 ##################################################
 
