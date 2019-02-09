@@ -18,6 +18,8 @@ push: build
 
 .make/build-%: Dockerfiles/Dockerfile-% $(DIRS)
 	docker image build -t conao3/emacs:$* -f $< .
+	docker container run -it conao3/emacs:$* emacs --version
+	docker container run -it conao3/emacs:$* emacs --batch --eval "(print emacs-version)"
 	touch $@
 
 ##################################################
