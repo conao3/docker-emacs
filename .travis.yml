@@ -13,11 +13,13 @@ services: docker
 #     - $HOME/cache
 
 env:
-  - DOCKER_IMAGES="master-alpine-dev master-alpine"
+  - TARGET_IMAGE="alpine-26.1-min"
+  - TARGET_IMAGE="alpine-26.1-normal"
 
 install:
   - docker version
-  - make .make/build-alpine-26.1-min
+  - make .make/build-${TARGET_IMAGE}
+  - docker container run conao3/emacs:${TARGET_IMAGE} --version
 
 # after_success:
 #   - |
