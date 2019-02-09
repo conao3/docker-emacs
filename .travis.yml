@@ -19,7 +19,8 @@ env:
 install:
   - docker version
   - make .make/build-${TARGET_IMAGE}
-  - docker container run conao3/emacs:${TARGET_IMAGE} --version
+  - docker container run -it conao3/emacs:${TARGET_IMAGE} emacs --version
+  - docker container run -it conao3/emacs:${TARGET_IMAGE} emacs --batch --eval "(print emacs-version)"
 
 # after_success:
 #   - |
