@@ -1,6 +1,6 @@
 all:
 
-TAG := latest
+TAGS := alpine-26.1-min alpine-26.1-normal
 
 DIRS := .make
 
@@ -8,7 +8,7 @@ DIRS := .make
 
 all: build
 
-build: .make/build-alpine-26.1-min
+build: $(TAGS:%=.make/build-%)
 	@:
 
 push: build
