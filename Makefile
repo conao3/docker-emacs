@@ -1,6 +1,7 @@
 all:
 
-TAGS := alpine-26.1-min alpine-26.1-normal
+TAGS := alpine-23.4-min
+TAGS  += alpine-26.1-min alpine-26.1-normal
 
 DIRS := .make
 
