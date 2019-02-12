@@ -56,7 +56,7 @@
 
       ;; custom validation on arguments
       (and (= 1 (count arguments))
-           (#{"start" "stop" "status"} (first arguments)))
+           (#{"gen" "build"} (first arguments)))
       {:action (first arguments) :options options}
 
       :else ; failed custom validation => exit with usage summary
@@ -66,14 +66,22 @@
   (println msg)
   (System/exit status))
 
+(defn action-gen [option]
+  (println option))
+
+(defn action-build [option]
+  (println option))
+
 (defn -main
   "I don't do a whole lot ... yet."
   [& args]
   (let [{:keys [action options exit-message ok?]} (validate-args args)]
     (if exit-message
       (exit (if ok? 0 1) exit-message)
-      (do
-        (println "Hello, World!")
-        (println (render "Hello, {{name}}!" {:name "Felix"}))
-        (println (generate-dockerfiles "26.1"))))))
-
+      (case action
+        "gen"     (action-gen options)
+        "build"   (action-build options)))
+    (do
+      (println "Hello, World!")
+      (println (render "Hello, {{name}}!" {:name "Felix"}))
+      (println (generate-dockerfiles "26.1")))))
