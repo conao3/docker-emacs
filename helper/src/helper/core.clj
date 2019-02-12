@@ -31,9 +31,8 @@
         "Usage: lein run <actions> [options]"
         ""
         "Actions:"
-        "  start    Start a new server"
-        "  stop     Stop an existing server"
-        "  status   Print a server's status"
+        "  gen      Generate Dockerfiles, Project readme"
+        "  build    Build docker images"
         ""
         "Options:"
         options-summary
