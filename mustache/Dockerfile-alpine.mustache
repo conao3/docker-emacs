@@ -18,8 +18,10 @@ FROM alpine:3.9 as dev
 RUN apk update && apk upgrade
 RUN apk add alpine-sdk
 
+{{#min?}}
 RUN apk add gtk+3.0-dev
 RUN apk add libcanberra-gtk3
+{{/min?}}
 RUN apk add ncurses-dev
 
 RUN apk add autoconf
@@ -33,6 +35,7 @@ RUN apk add gnutls-dev
 
 RUN apk add paxmark
 
+{{#min?}}
 RUN apk add libxml2-dev
 RUN apk add libjpeg-turbo-dev
 RUN apk add libpng-dev
@@ -45,16 +48,20 @@ RUN apk add dpkg-dev
 RUN apk add gconf-dev
 RUN apk add pango-dev
 RUN apk add alsa-lib-dev
+{{/min?}}
 
-RUN curl -o emacs.tar.gz http://git.savannah.gnu.org/cgit/emacs.git/snapshot/emacs-26.1.tar.gz
-RUN tar xvf emacs.tar.gz
+WORKDIR /opt
+RUN curl -vLO http://git.savannah.gnu.org/cgit/emacs.git/snapshot/emacs-26.1.tar.gz && \
+        tar xvf emacs-26.1.tar.gz && \
+        mv -v emacs-26.1 emacs && \
+        rm -rf emacs-26.1.tar.gz
 
 WORKDIR /opt/emacs
 
 RUN if [ -d patches ]; then git apply patches/*; fi && \
     ./autogen.sh && \
     ./configure && \
-    make -j 8 install
+    make -j install
 
 CMD ["emacs"]
 
@@ -63,13 +70,16 @@ CMD ["emacs"]
 FROM alpine:3.9
 
 RUN apk update && apk upgrade
+{{#min?}}
 RUN apk add gtk+3.0
 RUN apk add libcanberra-gtk3
+{{/min?}}
 
 RUN apk add curl
 RUN apk add gnupg
 RUN apk add openssh-client
 
+{{#min?}}
 RUN apk add librsvg
 RUN apk add libxpm
 RUN apk add giflib
@@ -79,6 +89,7 @@ RUN apk add desktop-file-utils
 
 RUN apk add gconf
 RUN apk add alsa-lib
+{{/min?}}
 
 COPY --from=0 /usr/local /usr/local
 
