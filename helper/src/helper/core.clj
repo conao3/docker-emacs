@@ -15,7 +15,7 @@
     :id :verbosity
     :default 0
     :update-fn inc] ; Prior to 0.4.1, you would have to use:
-                   ;; :assoc-fn (fn [m k _] (update-in m [k] inc))
+   ;; :assoc-fn (fn [m k _] (update-in m [k] inc))
    ;; A boolean option defaulting to nil
    ["-h" "--help"]])
 
@@ -71,12 +71,12 @@
   "I don't do a whole lot ... yet."
   [& args]
   (let [{:keys [action options exit-message ok?]} (validate-args args)]
-  (if exit-message
-  (exit (if ok? 0 1) exit-message)
-  (do
-  (parse-opts args cli-options)
+    (if exit-message
+      (exit (if ok? 0 1) exit-message)
+      (do
+        (parse-opts args cli-options)
 
-  (println "Hello, World!")
-  (println (render "Hello, {{name}}!" {:name "Felix"}))
-  (println (generate-dockerfiles "26.1"))))))
+        (println "Hello, World!")
+        (println (render "Hello, {{name}}!" {:name "Felix"}))
+        (println (generate-dockerfiles "26.1"))))))
 
