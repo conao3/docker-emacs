@@ -6,7 +6,7 @@
   "generate dockerfiles"
   [^String version]
   ;; (render "Hello, {{name}}!" {:name version})
-  (render-resource "Dockerfile-alpine.mustache" {:min true}))
+  (render-resource "Dockerfile-alpine.mustache" {:min? true}))
 
 (defn -main
   "I don't do a whole lot ... yet."
