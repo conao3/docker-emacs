@@ -74,8 +74,6 @@
     (if exit-message
       (exit (if ok? 0 1) exit-message)
       (do
-        (parse-opts args cli-options)
-
         (println "Hello, World!")
         (println (render "Hello, {{name}}!" {:name "Felix"}))
         (println (generate-dockerfiles "26.1"))))))
