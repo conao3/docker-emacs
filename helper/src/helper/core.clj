@@ -26,19 +26,19 @@
   (render-resource "Dockerfile-alpine.mustache" {:min true :version "26.1"}))
 
 (defn usage [options-summary]
-  (->> ["This is my program. There are many like it, but this one is mine."
+  (->> ["docker-emacs helper CLI tool."
         ""
-        "Usage: program-name [options] action"
-        ""
-        "Options:"
-        options-summary
+        "Usage: lein run <actions> [options]"
         ""
         "Actions:"
         "  start    Start a new server"
         "  stop     Stop an existing server"
         "  status   Print a server's status"
         ""
-        "Please refer to the manual page for more information."]
+        "Options:"
+        options-summary
+        ""
+        "Please refer to the readme for more information."]
        (string/join \newline)))
 
 (defn error-msg [errors]
