@@ -18,7 +18,7 @@ FROM alpine:3.9 as dev
 RUN apk update && apk upgrade
 RUN apk add alpine-sdk
 
-{{#min}}
+{{^min}}
 RUN apk add gtk+3.0-dev
 RUN apk add libcanberra-gtk3
 {{/min}}
@@ -35,7 +35,7 @@ RUN apk add gnutls-dev
 
 RUN apk add paxmark
 
-{{#min}}
+{{^min}}
 RUN apk add libxml2-dev
 RUN apk add libjpeg-turbo-dev
 RUN apk add libpng-dev
@@ -70,7 +70,7 @@ CMD ["emacs"]
 FROM alpine:3.9
 
 RUN apk update && apk upgrade
-{{#min}}
+{{^min}}
 RUN apk add gtk+3.0
 RUN apk add libcanberra-gtk3
 {{/min}}
@@ -79,7 +79,7 @@ RUN apk add curl
 RUN apk add gnupg
 RUN apk add openssh-client
 
-{{#min}}
+{{^min}}
 RUN apk add librsvg
 RUN apk add libxpm
 RUN apk add giflib
