@@ -31,8 +31,8 @@
    ;;  :update-fn inc] ; Prior to 0.4.1, you would have to use:
    ;; ;; :assoc-fn (fn [m k _] (update-in m [k] inc))
    ;; A boolean option defaulting to nil
-   ["-e" "--version TARGET-VERSION" "Target docker image emacs version"
-    :default "26.1"]
+   ["-e" "--version TARGET-VERSION" "Target emacs version (`all` or version)"
+    :default "all"]
    ["-s" "--os TARGET-OS" "Target docker image os"
     :default "alpine"]
    ["-h" "--help" "Show this help"]])
