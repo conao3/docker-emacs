@@ -13,14 +13,11 @@
    ;;  :update-fn inc] ; Prior to 0.4.1, you would have to use:
    ;; ;; :assoc-fn (fn [m k _] (update-in m [k] inc))
    ;; A boolean option defaulting to nil
-   ["-t" "--target TARGET-TAG" "Target docker image tag"]
+   ["-e" "--version TARGET-VERSION" "Target docker image emacs version"
+    :default "26.1"]
+   ["-s" "--os TARGET-OS" "Target docker image os"
+    :default "alpine"]
    ["-h" "--help" "Show this help"]])
-
-(defn- generate-dockerfiles
-  "generate dockerfiles"
-  [^String version]
-  ;; (render "Hello, {{name}}!" {:name version})
-  (render-resource "Dockerfile-alpine.mustache" {:min true :version "26.1"}))
 
 (defn usage [options-summary]
   (->> ["docker-emacs helper CLI tool."
@@ -66,11 +63,22 @@
   (println msg)
   (System/exit status))
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defn- gen-dockerfiles
+  "generate dockerfiles"
+  [^String version]
+  ;; (render "Hello, {{name}}!" {:name version})
+  (render-resource "Dockerfile-alpine.mustache" {:min true :version "26.1"}))
+
 (defn action-gen [option]
-  (println option))
+  (println option)
+  (println (gen-dockerfiles option)))
 
 (defn action-build [option]
   (println option))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defn -main
   "I don't do a whole lot ... yet."
@@ -80,8 +88,4 @@
       (exit (if ok? 0 1) exit-message)
       (case action
         "gen"     (action-gen options)
-        "build"   (action-build options)))
-    (do
-      (println "Hello, World!")
-      (println (render "Hello, {{name}}!" {:name "Felix"}))
-      (println (generate-dockerfiles "26.1")))))
+        "build"   (action-build options)))))
