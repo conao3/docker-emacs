@@ -33,7 +33,7 @@
    ;; A boolean option defaulting to nil
    ["-e" "--version TARGET-VERSION" "Target emacs version (`all` or version)"
     :default "all"]
-   ["-s" "--os TARGET-OS" "Target docker image os"
+   ["-s" "--os TARGET-OS" "Target docker image OS (`alpine` or `ubuntu`)"
     :default "alpine"]
    ["-h" "--help" "Show this help"]])
 
