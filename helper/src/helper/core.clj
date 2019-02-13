@@ -91,7 +91,14 @@
 
 (defn action-gen [option]
   (println option)
-  (println (gen-dockerfiles option)))
+  ;; (println (gen-dockerfiles option))
+  (let [{:keys [version os]} option]
+    (cond
+      (= version "all")
+      (println "all-")
+
+      :default
+      (println version))))
 
 (defn action-build [option]
   (println option))
