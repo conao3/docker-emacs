@@ -20,7 +20,8 @@
   (:require [clojure.edn :as edn]
             [clojure.string :as string]
             [clojure.tools.cli :refer [parse-opts]])
-  (:use [clostache.parser])
+  (:use [clostache.parser]
+        [clojure.string :only (join split)])
   (:gen-class))
 
 (def cli-options
@@ -86,9 +87,10 @@
 
 (defn- gen-dockerfiles
   "generate dockerfiles"
-  [^String version]
+  [{:keys [tags version branch]}]
   ;; (render "Hello, {{name}}!" {:name version})
-  (render-resource "Dockerfile-alpine.mustache" {:min true :version "26.1"}))
+  (println
+   (render-resource "Dockerfile-alpine.mustache" {:min true :version version})))
 
 (defn action-gen [option]
   (println option)
@@ -99,10 +101,10 @@
       (= os "alpine")
       (if (= version "all")
         nil
-        (println (:alpine-26.1-min alpine)))
+        (gen-dockerfiles ((keyword (join "-" [os version "min"])) alpine)))
 
       (= os "ubuntu")
-      (println ubuntu)
+      (println ((keyword (join "-" [os version "min"])) alpine))
 
       :default
       (println "all"))))
