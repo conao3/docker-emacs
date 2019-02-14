@@ -120,10 +120,7 @@
                     (run! (fn [type]
                             (gen-dockerfiles
                              ((keyword (join "-" [os version type])) data)))
-                          param-type)) param-version)) param-os)
-
-    (gen-dockerfiles (merge {:os os}
-                            ((keyword (join "-" [os version "min"])) alpine)))))
+                          param-type)) param-version)) param-os)))
 
 (defn action-build [option]
   (println option))
