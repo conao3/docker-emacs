@@ -87,10 +87,12 @@
 
 (defn- gen-dockerfiles
   "generate dockerfiles"
-  [{:keys [tags version branch type], :as option}]
+  [{:keys [os tags version branch type], :as option}]
   ;; (render "Hello, {{name}}!" {:name version})
-  (spit "Dockerfiles/Dockerfile-alpine-26.1-min"
-        (render-resource "Dockerfile-alpine.mustache" option)))
+  (spit (format "Dockerfiles/Dockerfile-%s-%s-%s" os version type)
+        (render-resource "Dockerfile-alpine.mustache"
+                         (merge {(keyword type) true}
+                                option))))
 
 (defn action-gen [option]
   (println option)
@@ -101,7 +103,8 @@
       (= os "alpine")
       (if (= version "all")
         nil
-        (gen-dockerfiles ((keyword (join "-" [os version "min"])) alpine)))
+        (gen-dockerfiles (merge {:os "alpine"}
+                                ((keyword (join "-" [os version "min"])) alpine))))
 
       (= os "ubuntu")
       (println ((keyword (join "-" [os version "min"])) alpine))
