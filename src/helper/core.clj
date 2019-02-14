@@ -97,11 +97,10 @@
                                 option)))
   (println (format "Wrote Dockerfiles/Dockerfile-%s-%s-%s" os version type)))
 
-(defn action-gen [option]
+(defn action-gen [{:keys [version os type], :as option}]
   (println option)
   ;; (println (gen-dockerfiles option))
-  (let [{:keys [version os type]} option
-        {:keys [alpine ubuntu], :as data} (edn/read-string (slurp "resources/data.edn"))
+  (let [data          (edn/read-string (slurp "resources/data.edn"))
         param-os      (if (not (= os "all"))
                         #{os}
                         #{"alpine" "ubuntu"})
