@@ -89,7 +89,7 @@
   "generate dockerfiles"
   [{:keys [tags version branch type]}]
   ;; (render "Hello, {{name}}!" {:name version})
-  (println
+  (spit "Dockerfiles/Dockerfile-alpine-26.1-min"
    (render-resource "Dockerfile-alpine.mustache" {:min true :version version})))
 
 (defn action-gen [option]
