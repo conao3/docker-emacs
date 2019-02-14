@@ -98,8 +98,6 @@
   (println (format "Wrote Dockerfiles/Dockerfile-%s-%s-%s" os version type)))
 
 (defn action-gen [{:keys [version os type], :as option}]
-  (println option)
-  ;; (println (gen-dockerfiles option))
   (let [data          (edn/read-string (slurp "resources/data.edn"))
         param-os      (if (not (= os "all"))
                         #{os}
@@ -113,7 +111,6 @@
         param-type    (if (not (= type "all"))
                         #{type}
                         #{"min"})]
-    (println param-version)
     (run! (fn [os]
             (run! (fn [version]
                     (run! (fn [type]
