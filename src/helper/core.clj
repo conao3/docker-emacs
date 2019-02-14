@@ -111,12 +111,21 @@
         param-type    (if (not (= type "all"))
                         #{type}
                         #{"min"})]
+    ;; generate Dockerfiles
     (run! (fn [os]
             (run! (fn [version]
                     (run! (fn [type]
                             (gen-dockerfiles
                              ((keyword (join "-" [os version type])) data)))
-                          param-type)) param-version)) param-os)))
+                          param-type)) param-version)) param-os)
+
+    ;; generate readme
+    ;; (spit "Readme.md"
+    ;;       (render-resource "Readme.mustache"
+    ;;                        (merge {(keyword type) true}
+    ;;                               option)))
+    ;; (println (format "Wrote Readme.md" os version type))
+    ))
 
 (defn action-build [option]
   (println option))
