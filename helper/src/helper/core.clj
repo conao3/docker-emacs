@@ -17,7 +17,8 @@
 ;; If not, see <https://www.gnu.org/licenses/>.
 
 (ns helper.core
-  (:require [clojure.string :as string]
+  (:require [clojure.edn :as edn]
+            [clojure.string :as string]
             [clojure.tools.cli :refer [parse-opts]])
   (:use [clostache.parser])
   (:gen-class))
@@ -92,10 +93,11 @@
 (defn action-gen [option]
   (println option)
   ;; (println (gen-dockerfiles option))
-  (let [{:keys [version os]} option]
+  (let [{:keys [version os]} option
+        data (edn/read-string (slurp "resources/data.edn"))]
     (cond
       (= version "all")
-      (println "all-")
+      (println data)
 
       :default
       (println version))))
