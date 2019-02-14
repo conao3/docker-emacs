@@ -34,8 +34,8 @@
    ;; A boolean option defaulting to nil
    ["-e" "--version TARGET-VERSION" "Target emacs version (`all` or version)"
     :default "all"]
-   ["-s" "--os TARGET-OS" "Target docker image OS (`alpine` or `ubuntu`)"
-    :default "alpine"]
+   ["-s" "--os TARGET-OS" "Target docker image OS (`all` or `alpine` or `ubuntu`)"
+    :default "all"]
    ["-h" "--help" "Show this help"]])
 
 (defn usage [options-summary]
@@ -94,13 +94,18 @@
   (println option)
   ;; (println (gen-dockerfiles option))
   (let [{:keys [version os]} option
-        data (edn/read-string (slurp "resources/data.edn"))]
+        {:keys [alpine ubuntu]} (edn/read-string (slurp "resources/data.edn"))]
     (cond
-      (= version "all")
-      (println data)
+      (= os "alpine")
+      (if (= version "all")
+        nil
+        (println (:alpine-26.1-min alpine)))
+
+      (= os "ubuntu")
+      (println ubuntu)
 
       :default
-      (println version))))
+      (println "all"))))
 
 (defn action-build [option]
   (println option))
