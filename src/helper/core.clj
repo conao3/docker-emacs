@@ -33,9 +33,11 @@
    ;;  :update-fn inc] ; Prior to 0.4.1, you would have to use:
    ;; ;; :assoc-fn (fn [m k _] (update-in m [k] inc))
    ;; A boolean option defaulting to nil
+   ["-s" "--os TARGET-OS" "Target docker image OS (`all` or `alpine` or `ubuntu`)"
+    :default "all"]
    ["-e" "--version TARGET-VERSION" "Target emacs version (`all` or version)"
     :default "all"]
-   ["-s" "--os TARGET-OS" "Target docker image OS (`all` or `alpine` or `ubuntu`)"
+   ["-t" "--type TARGET-TYPE" "Target type (`all` or `min`)"
     :default "all"]
    ["-h" "--help" "Show this help"]])
 
@@ -92,13 +94,14 @@
   (spit (format "Dockerfiles/Dockerfile-%s-%s-%s" os version type)
         (render-resource "Dockerfile-alpine.mustache"
                          (merge {(keyword type) true}
-                                option))))
+                                option)))
+  (println (format "Wrote Dockerfiles/Dockerfile-%s-%s-%s" os version type)))
 
 (defn action-gen [option]
   (println option)
   ;; (println (gen-dockerfiles option))
-  (let [{:keys [version os]} option
-        {:keys [alpine ubuntu]} (edn/read-string (slurp "resources/data.edn"))
+  (let [{:keys [version os type]} option
+        {:keys [alpine ubuntu], :as data} (edn/read-string (slurp "resources/data.edn"))
         param-os      (if (not (= os "all"))
                         #{os}
                         #{"alpine" "ubuntu"})
@@ -111,6 +114,14 @@
         param-type    (if (not (= type "all"))
                         #{type}
                         #{"min"})]
+    (println param-version)
+    (run! (fn [os]
+            (run! (fn [version]
+                    (run! (fn [type]
+                            (gen-dockerfiles
+                             ((keyword (join "-" [os version type])) data)))
+                          param-type)) param-version)) param-os)
+
     (gen-dockerfiles (merge {:os os}
                             ((keyword (join "-" [os version "min"])) alpine)))))
 
