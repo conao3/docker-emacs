@@ -87,7 +87,7 @@
 
 (defn- gen-dockerfiles
   "generate dockerfiles"
-  [option]
+  [{:keys [tags version branch type], :as option}]
   ;; (render "Hello, {{name}}!" {:name version})
   (spit "Dockerfiles/Dockerfile-alpine-26.1-min"
         (render-resource "Dockerfile-alpine.mustache" option)))
