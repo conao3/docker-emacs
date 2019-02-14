@@ -17,27 +17,27 @@
 ;; If not, see <https://www.gnu.org/licenses/>.
 
 {:alpine
-  #{{:id "26.1-alpine-min" :tags #{"26.1-alpine-min"} :version "26.1" :branch "emacs-26.1"}
-    {:id "25.1-alpine-min" :tags #{"25.1-alpine-min"} :version "25.1" :branch "emacs-25.1"}
-    {:id "25.2-alpine-min" :tags #{"25.2-alpine-min"} :version "25.2" :branch "emacs-25.2"}
-    {:id "25.3-alpine-min" :tags #{"25.3-alpine-min"} :version "25.3" :branch "emacs-25.3"}
-    {:id "24.1-alpine-min" :tags #{"24.1-alpine-min"} :version "24.1" :branch "emacs-24.1"}
-    {:id "24.2-alpine-min" :tags #{"24.2-alpine-min"} :version "24.2" :branch "emacs-24.2"}
-    {:id "24.3-alpine-min" :tags #{"24.3-alpine-min"} :version "24.3" :branch "emacs-24.3"}
-    {:id "24.4-alpine-min" :tags #{"24.4-alpine-min"} :version "24.4" :branch "emacs-24.4"}
-    {:id "24.5-alpine-min" :tags #{"24.5-alpine-min"} :version "24.5" :branch "emacs-24.5"}
-    {:id "23.3-alpine-min" :tags #{"23.3-alpine-min"} :version "23.3" :branch "emacs-23.3"}
-    {:id "23.4-alpine-min" :tags #{"23.4-alpine-min"} :version "23.4" :branch "emacs-23.4"}}
+ {:alpine-26.1-min {:tags #{"alpine-26.1-min"} :version "26.1" :branch "emacs-26.1"}
+  :alpine-25.1-min {:tags #{"alpine-25.1-min"} :version "25.1" :branch "emacs-25.1"}
+  :alpine-25.2-min {:tags #{"alpine-25.2-min"} :version "25.2" :branch "emacs-25.2"}
+  :alpine-25.3-min {:tags #{"alpine-25.3-min"} :version "25.3" :branch "emacs-25.3"}
+  :alpine-24.1-min {:tags #{"alpine-24.1-min"} :version "24.1" :branch "emacs-24.1"}
+  :alpine-24.2-min {:tags #{"alpine-24.2-min"} :version "24.2" :branch "emacs-24.2"}
+  :alpine-24.3-min {:tags #{"alpine-24.3-min"} :version "24.3" :branch "emacs-24.3"}
+  :alpine-24.4-min {:tags #{"alpine-24.4-min"} :version "24.4" :branch "emacs-24.4"}
+  :alpine-24.5-min {:tags #{"alpine-24.5-min"} :version "24.5" :branch "emacs-24.5"}
+  :alpine-23.3-min {:tags #{"alpine-23.3-min"} :version "23.3" :branch "emacs-23.3"}
+  :alpine-23.4-min {:tags #{"alpine-23.4-min"} :version "23.4" :branch "emacs-23.4"}}
 
-  :ubuntu
-  #{{:id "26.1-min" :tags #{"26.1-alpine-min"} :version "26.1" :branch "emacs-26.1"}
-    {:id "25.1-min" :tags #{"25.1-alpine-min"} :version "25.1" :branch "emacs-25.1"}
-    {:id "25.2-min" :tags #{"25.2-alpine-min"} :version "25.2" :branch "emacs-25.2"}
-    {:id "25.3-min" :tags #{"25.3-alpine-min"} :version "25.3" :branch "emacs-25.3"}
-    {:id "24.1-min" :tags #{"24.1-alpine-min"} :version "24.1" :branch "emacs-24.1"}
-    {:id "24.2-min" :tags #{"24.2-alpine-min"} :version "24.2" :branch "emacs-24.2"}
-    {:id "24.3-min" :tags #{"24.3-alpine-min"} :version "24.3" :branch "emacs-24.3"}
-    {:id "24.4-min" :tags #{"24.4-alpine-min"} :version "24.4" :branch "emacs-24.4"}
-    {:id "24.5-min" :tags #{"24.5-alpine-min"} :version "24.5" :branch "emacs-24.5"}
-    {:id "23.3-min" :tags #{"23.3-alpine-min"} :version "23.3" :branch "emacs-23.3"}
-    {:id "23.4-min" :tags #{"23.4-alpine-min"} :version "23.4" :branch "emacs-23.4"}}}
+ :ubuntu
+ {:ubuntu-26.1-min {:tags #{"ubuntu-26.1-min"} :version "26.1" :branch "emacs-26.1"}
+  :ubuntu-25.1-min {:tags #{"ubuntu-25.1-min"} :version "25.1" :branch "emacs-25.1"}
+  :ubuntu-25.2-min {:tags #{"ubuntu-25.2-min"} :version "25.2" :branch "emacs-25.2"}
+  :ubuntu-25.3-min {:tags #{"ubuntu-25.3-min"} :version "25.3" :branch "emacs-25.3"}
+  :ubuntu-24.1-min {:tags #{"ubuntu-24.1-min"} :version "24.1" :branch "emacs-24.1"}
+  :ubuntu-24.2-min {:tags #{"ubuntu-24.2-min"} :version "24.2" :branch "emacs-24.2"}
+  :ubuntu-24.3-min {:tags #{"ubuntu-24.3-min"} :version "24.3" :branch "emacs-24.3"}
+  :ubuntu-24.4-min {:tags #{"ubuntu-24.4-min"} :version "24.4" :branch "emacs-24.4"}
+  :ubuntu-24.5-min {:tags #{"ubuntu-24.5-min"} :version "24.5" :branch "emacs-24.5"}
+  :ubuntu-23.3-min {:tags #{"ubuntu-23.3-min"} :version "23.3" :branch "emacs-23.3"}
+  :ubuntu-23.4-min {:tags #{"ubuntu-23.4-min"} :version "23.4" :branch "emacs-23.4"}}}
