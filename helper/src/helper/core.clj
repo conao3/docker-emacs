@@ -87,7 +87,7 @@
 
 (defn- gen-dockerfiles
   "generate dockerfiles"
-  [{:keys [tags version branch]}]
+  [{:keys [tags version branch type]}]
   ;; (render "Hello, {{name}}!" {:name version})
   (println
    (render-resource "Dockerfile-alpine.mustache" {:min true :version version})))
