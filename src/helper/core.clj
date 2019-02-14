@@ -98,19 +98,21 @@
   (println option)
   ;; (println (gen-dockerfiles option))
   (let [{:keys [version os]} option
-        {:keys [alpine ubuntu]} (edn/read-string (slurp "resources/data.edn"))]
-    (cond
-      (= os "alpine")
-      (if (= version "all")
-        nil
-        (gen-dockerfiles (merge {:os "alpine"}
-                                ((keyword (join "-" [os version "min"])) alpine))))
-
-      (= os "ubuntu")
-      (println ((keyword (join "-" [os version "min"])) alpine))
-
-      :default
-      (println "all"))))
+        {:keys [alpine ubuntu]} (edn/read-string (slurp "resources/data.edn"))
+        param-os      (if (not (= os "all"))
+                        #{os}
+                        #{"alpine" "ubuntu"})
+        param-version (if (not (= version "all"))
+                        #{version}
+                        #{"26.1"
+                          "25.1" "25.2" "25.3"
+                          "24.1" "24.2" "24.3" "24.4" "24.5"
+                          "23.3" "23.4"})
+        param-type    (if (not (= type "all"))
+                        #{type}
+                        #{"min"})]
+    (gen-dockerfiles (merge {:os os}
+                            ((keyword (join "-" [os version "min"])) alpine)))))
 
 (defn action-build [option]
   (println option))
