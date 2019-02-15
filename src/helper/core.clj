@@ -21,7 +21,8 @@
             [clojure.string :as string]
             [clojure.tools.cli :refer [parse-opts]])
   (:use [clostache.parser]
-        [clojure.string :only (join split)])
+        [clojure.string :only (join split)]
+        [clojure.java.shell :only (sh)])
   (:gen-class))
 
 (def cli-options
@@ -126,8 +127,28 @@
           (render-resource "Readme.mustache" {:data data}))
     (println (format "Wrote Readme.md" os version type))))
 
-(defn action-build [option]
-  (println option))
+(defn action-build [{:keys [version os type], :as option}]
+  (let [data          (edn/read-string (slurp "resources/data.edn"))
+        param-os      (if (not (= os "all"))
+                        #{os}
+                        #{"alpine" "ubuntu"})
+        param-version (if (not (= version "all"))
+                        #{version}
+                        #{"26.1"
+                          "25.1" "25.2" "25.3"
+                          "24.1" "24.2" "24.3" "24.4" "24.5"
+                          "23.3" "23.4"})
+        param-type    (if (not (= type "all"))
+                        #{type}
+                        #{"min"})]
+
+    (println (format "Start build %s" "conao3/emacs:alpine-23.4-min"))
+    (println
+     (:out (sh "docker" "image" "build"
+               "-t" "conao3/emacs:alpine-23.4-min"
+               "-f" "Dockerfiles/Dockerfile-alpine-23.4-min"
+               ".")))
+    (println (format "Complete build %s" "conao3/emacs:alpine-23.4-min"))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
