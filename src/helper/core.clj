@@ -111,6 +111,7 @@
         param-type    (if (not (= type "all"))
                         #{type}
                         #{"min"})]
+
     ;; generate Dockerfiles
     (run! (fn [os]
             (run! (fn [version]
