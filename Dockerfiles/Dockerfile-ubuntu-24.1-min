@@ -15,7 +15,7 @@
 
 #
 
-# Image from this Dockerfile tagged as #{"ubuntu-24.1-min"}
+# Image from this Dockerfile tagged as #{"ubuntu-24.1-min 24.1"}
 
 FROM alpine:3.9 as dev
 

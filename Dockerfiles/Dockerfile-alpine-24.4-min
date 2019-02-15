@@ -15,7 +15,7 @@
 
 #
 
-# Image from this Dockerfile tagged as #{"alpine-24.4-min"}
+# Image from this Dockerfile tagged as #{"alpine-24.4-min 24.4-alpine"}
 
 FROM alpine:3.9 as dev
 
