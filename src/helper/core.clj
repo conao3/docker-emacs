@@ -116,7 +116,8 @@
             (run! (fn [version]
                     (run! (fn [type]
                             (gen-dockerfiles
-                             ((keyword (join "-" [os version type])) data)))
+                             (some #(when (= (:id %) (join "-" [os version type])) %)
+                                   data)))
                           param-type)) param-version)) param-os)
 
     ;; generate readme
