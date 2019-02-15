@@ -125,6 +125,11 @@
     ;;                        (merge {(keyword type) true}
     ;;                               option)))
     ;; (println (format "Wrote Readme.md" os version type))
+    ;; (let [value nil]
+    ;;   (println
+    ;;    (apply sorted-map (map (fn [[k {tags :tags}]]
+    ;;                         [(name k)])
+    ;;                       data))))
     ))
 
 (defn action-build [option]
