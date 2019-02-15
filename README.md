@@ -13,40 +13,28 @@ This project provides different docker images:
 
 # Tags
 
-- `master` [(master/ubuntu/18.04/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/master/ubuntu/18.04/Dockerfile)
-- `master-dev` [(master/ubuntu/18.04/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/master/ubuntu/18.04/Dockerfile)
-- `master-alpine` [(master/alpine/3.9/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/master/alpine/3.9/Dockerfile)
-- `master-alpine-dev` [(master/alpine/3.9/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/master/alpine/3.9/Dockerfile)
-- `26.2` [(26.2/ubuntu/18.04/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/26.2/ubuntu/18.04/Dockerfile)
-- `26.2-dev` [(26.2/ubuntu/18.04/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/26.2/ubuntu/18.04/Dockerfile)
-- `26.2-alpine` [(26.2/alpine/3.9/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/26.2/alpine/3.9/Dockerfile)
-- `26.2-alpine-dev` [(26.2/alpine/3.9/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/26.2/alpine/3.9/Dockerfile)
-- `26.1`, `26`, `latest` [(26.1/ubuntu/18.04/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/26.1/ubuntu/18.04/Dockerfile)
-- `26.1-dev`, `26-dev`, `dev` [(26.1/ubuntu/18.04/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/26.1/ubuntu/18.04/Dockerfile)
-- `26.1-alpine`, `26-alpine`, `alpine` [(26.1/alpine/3.9/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/26.1/alpine/3.9/Dockerfile)
-- `26.1-alpine-dev`, `26-alpine-dev`, `alpine-dev` [(26.1/alpine/3.9/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/26.1/alpine/3.9/Dockerfile)
-- `25.3`, `25` [(25.3/ubuntu/18.04/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/25.3/ubuntu/18.04/Dockerfile)
-- `25.3-dev`, `25-dev` [(25.3/ubuntu/18.04/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/25.3/ubuntu/18.04/Dockerfile)
-- `25.3-alpine`, `25-alpine` [(25.3/alpine/3.9/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/25.3/alpine/3.9/Dockerfile)
-- `25.3-alpine-dev`, `25-alpine-dev` [(25.3/alpine/3.9/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/25.3/alpine/3.9/Dockerfile)
-- `25.2` [(25.2/ubuntu/18.04/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/25.2/ubuntu/18.04/Dockerfile)
-- `25.2-dev` [(25.2/ubuntu/18.04/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/25.2/ubuntu/18.04/Dockerfile)
-- `25.2-alpine` [(25.2/alpine/3.9/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/25.2/alpine/3.9/Dockerfile)
-- `25.2-alpine-dev` [(25.2/alpine/3.9/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/25.2/alpine/3.9/Dockerfile)
-- `25.1` [(25.1/ubuntu/18.04/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/25.1/ubuntu/18.04/Dockerfile)
-- `25.1-dev` [(25.1/ubuntu/18.04/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/25.1/ubuntu/18.04/Dockerfile)
-- `24.5`, `24` [(24.5/ubuntu/18.04/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/24.5/ubuntu/18.04/Dockerfile)
-- `24.5-dev`, `24-dev` [(24.5/ubuntu/18.04/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/24.5/ubuntu/18.04/Dockerfile)
-- `24.4` [(24.4/ubuntu/12.04/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/24.4/ubuntu/12.04/Dockerfile)
-- `24.4-dev` [(24.4/ubuntu/12.04/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/24.4/ubuntu/12.04/Dockerfile)
-- `24.3` [(24.3/ubuntu/12.04/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/24.3/ubuntu/12.04/Dockerfile)
-- `24.3-dev` [(24.3/ubuntu/12.04/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/24.3/ubuntu/12.04/Dockerfile)
-- `24.2` [(24.2/ubuntu/12.04/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/24.2/ubuntu/12.04/Dockerfile)
-- `24.2-dev` [(24.2/ubuntu/12.04/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/24.2/ubuntu/12.04/Dockerfile)
-- `24.1` [(24.1/ubuntu/12.04/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/24.1/ubuntu/12.04/Dockerfile)
-- `24.1-dev` [(24.1/ubuntu/12.04/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/24.1/ubuntu/12.04/Dockerfile)
-- `23.4`, `23` [(23.4/ubuntu/12.04/bootstrap/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/23.4/ubuntu/12.04/bootstrap/Dockerfile)
-- `23.4-dev`, `23-dev` [(23.4/ubuntu/12.04/bootstrap/Dockerfile)](https://github.com/silex/docker-emacs/blob/master/23.4/ubuntu/12.04/bootstrap/Dockerfile)
+- \#{"alpine-26.1-min"}
+- \#{"alpine-25.1-min"}
+- \#{"alpine-25.2-min"}
+- \#{"alpine-25.3-min"}
+- \#{"alpine-24.1-min"}
+- \#{"alpine-24.2-min"}
+- \#{"alpine-24.3-min"}
+- \#{"alpine-24.4-min"}
+- \#{"alpine-24.5-min"}
+- \#{"alpine-23.3-min"}
+- \#{"alpine-23.4-min"}
+- \#{"ubuntu-26.1-min"}
+- \#{"ubuntu-25.1-min"}
+- \#{"ubuntu-25.2-min"}
+- \#{"ubuntu-25.3-min"}
+- \#{"ubuntu-24.1-min"}
+- \#{"ubuntu-24.2-min"}
+- \#{"ubuntu-24.3-min"}
+- \#{"ubuntu-24.4-min"}
+- \#{"ubuntu-24.5-min"}
+- \#{"ubuntu-23.3-min"}
+- \#{"ubuntu-23.4-min"}
 
 # Usage
 
@@ -78,7 +66,7 @@ docker run -it --rm -e DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix silex/emacs
 
 They are very welcome! The basic workflow is as follow:
 
-- Modify `images.yml`.
-- Modify files inside the `/templates` directory.
-- Run `bin/images generate` to spread the changes everywhere.
-run
+- Modify files inside the `/resources` directory.
+- Run `lein run -- gen` to spread the changes everywhere.
+
+- Run `lein run -- build` to build docker images.

@@ -121,17 +121,9 @@
                           param-type)) param-version)) param-os)
 
     ;; generate readme
-    ;; (spit "Readme.md"
-    ;;       (render-resource "Readme.mustache"
-    ;;                        (merge {(keyword type) true}
-    ;;                               option)))
-    ;; (println (format "Wrote Readme.md" os version type))
-    ;; (let [value nil]
-    ;;   (println
-    ;;    (apply sorted-map (map (fn [[k {tags :tags}]]
-    ;;                         [(name k)])
-    ;;                       data))))
-    ))
+    (spit "Readme.md"
+          (render-resource "Readme.mustache" {:data data}))
+    (println (format "Wrote Readme.md" os version type))))
 
 (defn action-build [option]
   (println option))
