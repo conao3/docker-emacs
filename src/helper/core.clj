@@ -130,7 +130,12 @@
     ;; generate .travis.yml
     (spit ".travis.yml"
           (render-resource ".travis.yml.mustache" {:data data}))
-    (println (format "Wrote .travis.yml" os version type))))
+    (println (format "Wrote .travis.yml" os version type))
+
+    ;; generate Makefile
+    (spit "Makefile"
+          (render-resource "Makefile.mustache" {:data data}))
+    (println (format "Wrote Makefile" os version type))))
 
 (defn action-build [{:keys [version os type], :as option}]
   (let [data          (edn/read-string (slurp "resources/data.edn"))
