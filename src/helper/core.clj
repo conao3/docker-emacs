@@ -124,12 +124,12 @@
 
     ;; generate readme
     (spit "Readme.md"
-          (render-resource "Readme.mustache" {:data data}))
+          (render-resource "Readme.md.mustache" {:data data}))
     (println (format "Wrote Readme.md" os version type))
 
     ;; generate .travis.yml
     (spit ".travis.yml"
-          (render-resource ".travis.mustache" {:data data}))
+          (render-resource ".travis.yml.mustache" {:data data}))
     (println (format "Wrote .travis.yml" os version type))))
 
 (defn action-build [{:keys [version os type], :as option}]
