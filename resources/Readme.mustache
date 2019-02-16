@@ -1,3 +1,5 @@
+<!-- -*- mode: markdown; -*- -->
+
 # Description
 
 Run Emacs in docker containers!
