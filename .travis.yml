@@ -1,3 +1,5 @@
+# -*- mode: yaml; -*-
+
 language: generic
 
 addons:
@@ -14,7 +16,27 @@ services: docker
 
 env:
   - TARGET_IMAGE="alpine-26.1-min"
-  - TARGET_IMAGE="alpine-26.1-normal"
+  - TARGET_IMAGE="alpine-25.1-min"
+  - TARGET_IMAGE="alpine-25.2-min"
+  - TARGET_IMAGE="alpine-25.3-min"
+  - TARGET_IMAGE="alpine-24.1-min"
+  - TARGET_IMAGE="alpine-24.2-min"
+  - TARGET_IMAGE="alpine-24.3-min"
+  - TARGET_IMAGE="alpine-24.4-min"
+  - TARGET_IMAGE="alpine-24.5-min"
+  - TARGET_IMAGE="alpine-23.3-min"
+  - TARGET_IMAGE="alpine-23.4-min"
+  - TARGET_IMAGE="ubuntu-26.1-min"
+  - TARGET_IMAGE="ubuntu-25.1-min"
+  - TARGET_IMAGE="ubuntu-25.2-min"
+  - TARGET_IMAGE="ubuntu-25.3-min"
+  - TARGET_IMAGE="ubuntu-24.1-min"
+  - TARGET_IMAGE="ubuntu-24.2-min"
+  - TARGET_IMAGE="ubuntu-24.3-min"
+  - TARGET_IMAGE="ubuntu-24.4-min"
+  - TARGET_IMAGE="ubuntu-24.5-min"
+  - TARGET_IMAGE="ubuntu-23.3-min"
+  - TARGET_IMAGE="ubuntu-23.4-min"
 
 install:
   - docker version

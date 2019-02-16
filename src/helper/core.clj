@@ -125,7 +125,12 @@
     ;; generate readme
     (spit "Readme.md"
           (render-resource "Readme.mustache" {:data data}))
-    (println (format "Wrote Readme.md" os version type))))
+    (println (format "Wrote Readme.md" os version type))
+
+    ;; generate .travis.yml
+    (spit ".travis.yml"
+          (render-resource ".travis.mustache" {:data data}))
+    (println (format "Wrote .travis.yml" os version type))))
 
 (defn action-build [{:keys [version os type], :as option}]
   (let [data          (edn/read-string (slurp "resources/data.edn"))
