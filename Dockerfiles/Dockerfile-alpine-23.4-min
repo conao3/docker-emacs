@@ -44,7 +44,6 @@ RUN curl -vLO http://git.savannah.gnu.org/cgit/emacs.git/snapshot/emacs-23.4.tar
 WORKDIR /opt/emacs
 
 RUN if [ -d patches ]; then git apply patches/*; fi && \
-    ./autogen.sh && \
     ./configure && \
     make -j install
 
