@@ -30,7 +30,6 @@ This project provides different docker images:
 | `#{"ubuntu-24.2 24.2"}` | [(Dockerfiles/Dockerfile-ubuntu-24.2-normal)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-24.2-normal) |
 | `#{"ubuntu-24.1 24.1"}` | [(Dockerfiles/Dockerfile-ubuntu-24.1-normal)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-24.1-normal) |
 | `#{"ubuntu-23.4 23.4"}` | [(Dockerfiles/Dockerfile-ubuntu-23.4-normal)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-23.4-normal) |
-| `#{"ubuntu-23.3 23.3"}` | [(Dockerfiles/Dockerfile-ubuntu-23.3-normal)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-23.3-normal) |
 | `#{"alpine-26.1-min 26.1-alpine-min"}` | [(Dockerfiles/Dockerfile-alpine-26.1-min)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-alpine-26.1-min) |
 | `#{"alpine-25.3-min 25.3-alpine-min"}` | [(Dockerfiles/Dockerfile-alpine-25.3-min)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-alpine-25.3-min) |
 | `#{"alpine-25.2-min 25.2-alpine-min"}` | [(Dockerfiles/Dockerfile-alpine-25.2-min)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-alpine-25.2-min) |
@@ -44,7 +43,6 @@ This project provides different docker images:
 | `#{"ubuntu-24.2-min 24.2-min"}` | [(Dockerfiles/Dockerfile-ubuntu-24.2-min)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-24.2-min) |
 | `#{"ubuntu-24.1-min 24.1-min"}` | [(Dockerfiles/Dockerfile-ubuntu-24.1-min)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-24.1-min) |
 | `#{"ubuntu-23.4-min 23.4-min"}` | [(Dockerfiles/Dockerfile-ubuntu-23.4-min)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-23.4-min) |
-| `#{"ubuntu-23.3-min 23.3-min"}` | [(Dockerfiles/Dockerfile-ubuntu-23.3-min)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-23.3-min) |
 
 # Usage
 

@@ -28,7 +28,6 @@ env:
   - TARGET_IMAGE="ubuntu-24.2-normal"
   - TARGET_IMAGE="ubuntu-24.1-normal"
   - TARGET_IMAGE="ubuntu-23.4-normal"
-  - TARGET_IMAGE="ubuntu-23.3-normal"
   - TARGET_IMAGE="alpine-26.1-min"
   - TARGET_IMAGE="alpine-25.3-min"
   - TARGET_IMAGE="alpine-25.2-min"
@@ -42,7 +41,6 @@ env:
   - TARGET_IMAGE="ubuntu-24.2-min"
   - TARGET_IMAGE="ubuntu-24.1-min"
   - TARGET_IMAGE="ubuntu-23.4-min"
-  - TARGET_IMAGE="ubuntu-23.3-min"
 
 install:
   - docker version

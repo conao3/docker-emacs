@@ -55,14 +55,10 @@ RUN curl -vLO http://git.savannah.gnu.org/cgit/emacs.git/snapshot/emacs-26.1.tar
         mv -v emacs-26.1 emacs && \
         rm -rf emacs-26.1.tar.gz
 
+COPY patch/musl.patch /opt/emacs/musl.patch
 WORKDIR /opt/emacs
-
-RUN if [ -d patches ]; then git apply patches/*; fi && \
-    ./autogen.sh && \
-    ./configure && \
-    make -j install
-
-CMD ["emacs"]
+RUN patch -p1 < musl.patch
+RUN ./autogen.sh && ./configure &&  make -j install
 
 # ------------------------------------------------------------
 
