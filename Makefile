@@ -4,27 +4,19 @@ all:
 
 TAGS :=
 TAGS  += alpine-26.1-min
-TAGS  += alpine-25.1-min
-TAGS  += alpine-25.2-min
 TAGS  += alpine-25.3-min
-TAGS  += alpine-24.1-min
-TAGS  += alpine-24.2-min
-TAGS  += alpine-24.3-min
-TAGS  += alpine-24.4-min
-TAGS  += alpine-24.5-min
-TAGS  += alpine-23.3-min
-TAGS  += alpine-23.4-min
+TAGS  += alpine-25.2-min
 TAGS  += ubuntu-26.1-min
-TAGS  += ubuntu-25.1-min
-TAGS  += ubuntu-25.2-min
 TAGS  += ubuntu-25.3-min
-TAGS  += ubuntu-24.1-min
-TAGS  += ubuntu-24.2-min
-TAGS  += ubuntu-24.3-min
-TAGS  += ubuntu-24.4-min
+TAGS  += ubuntu-25.2-min
+TAGS  += ubuntu-25.1-min
 TAGS  += ubuntu-24.5-min
-TAGS  += ubuntu-23.3-min
+TAGS  += ubuntu-24.4-min
+TAGS  += ubuntu-24.3-min
+TAGS  += ubuntu-24.2-min
+TAGS  += ubuntu-24.1-min
 TAGS  += ubuntu-23.4-min
+TAGS  += ubuntu-23.3-min
 
 DIRS := .make
 
