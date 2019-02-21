@@ -18,8 +18,8 @@
 
 (;; normal images
  {:id "alpine-26.1-normal" :os "alpine" :version "26.1" :branch "emacs-26.1" :type "normal" :tags #{"alpine-26.1 26.1-alpine"}}
- {:id "alpine-25.3-normal" :os "alpine" :version "25.3" :branch "emacs-25.3" :type "normal" :tags #{"alpine-25.3 25.3-alpine"}}
- {:id "alpine-25.2-normal" :os "alpine" :version "25.2" :branch "emacs-25.2" :type "normal" :tags #{"alpine-25.2 25.2-alpine"}}
+ {:id "alpine-25.3-normal" :os "alpine" :version "25.3" :branch "emacs-25.3" :type "normal" :tags #{"alpine-25.3 25.3-alpine"} :musl-patch true}
+ {:id "alpine-25.2-normal" :os "alpine" :version "25.2" :branch "emacs-25.2" :type "normal" :tags #{"alpine-25.2 25.2-alpine"} :musl-patch true}
 
  {:id "ubuntu-26.1-normal" :os "ubuntu" :version "26.1" :branch "emacs-26.1" :type "normal" :tags #{"ubuntu-26.1 26.1"}}
  {:id "ubuntu-25.3-normal" :os "ubuntu" :version "25.3" :branch "emacs-25.3" :type "normal" :tags #{"ubuntu-25.3 25.3"}}
@@ -35,8 +35,8 @@
 
  ;; min images
  {:id "alpine-26.1-min" :os "alpine" :version "26.1" :branch "emacs-26.1" :type "min" :tags #{"alpine-26.1-min 26.1-alpine-min"}}
- {:id "alpine-25.3-min" :os "alpine" :version "25.3" :branch "emacs-25.3" :type "min" :tags #{"alpine-25.3-min 25.3-alpine-min"}}
- {:id "alpine-25.2-min" :os "alpine" :version "25.2" :branch "emacs-25.2" :type "min" :tags #{"alpine-25.2-min 25.2-alpine-min"}}
+ {:id "alpine-25.3-min" :os "alpine" :version "25.3" :branch "emacs-25.3" :type "min" :tags #{"alpine-25.3-min 25.3-alpine-min"} :musl-patch true}
+ {:id "alpine-25.2-min" :os "alpine" :version "25.2" :branch "emacs-25.2" :type "min" :tags #{"alpine-25.2-min 25.2-alpine-min"} :musl-patch true}
                                                                                                                 
  {:id "ubuntu-26.1-min" :os "ubuntu" :version "26.1" :branch "emacs-26.1" :type "min" :tags #{"ubuntu-26.1-min 26.1-min"}}
  {:id "ubuntu-25.3-min" :os "ubuntu" :version "25.3" :branch "emacs-25.3" :type "min" :tags #{"ubuntu-25.3-min 25.3-min"}}

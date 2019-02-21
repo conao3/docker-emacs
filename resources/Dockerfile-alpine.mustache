@@ -60,9 +60,11 @@ RUN curl -vLO http://git.savannah.gnu.org/cgit/emacs.git/snapshot/{{branch}}.tar
         mv -v {{branch}} emacs && \
         rm -rf {{branch}}.tar.gz
 
-COPY patch/musl.patch /opt/emacs/musl.patch
 WORKDIR /opt/emacs
+{{#musl-patch}}
+COPY patch/musl.patch /opt/emacs/musl.patch
 RUN patch -p1 < musl.patch
+{{/musl-patch}}
 RUN ./autogen.sh && ./configure &&  make -j install
 
 # ------------------------------------------------------------
