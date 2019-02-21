@@ -92,11 +92,12 @@
   "generate dockerfiles"
   [{:keys [os tags version branch type], :as option}]
   ;; (render "Hello, {{name}}!" {:name version})
-  (spit (format "Dockerfiles/Dockerfile-%s-%s-%s" os version type)
-        (render-resource "Dockerfile-alpine.mustache"
-                         (merge {(keyword type) true}
-                                option)))
-  (println (format "Wrote Dockerfiles/Dockerfile-%s-%s-%s" os version type)))
+  (let [readfile  (format "Dockerfile-%s.mustache" os)
+        writefile (format "Dockerfiles/Dockerfile-%s-%s-%s" os version type)]
+    (spit writefile
+          (render-resource readfile (merge option
+                                           {(keyword type) true})))
+    (println (format "Wrote %s" writefile))))
 
 (defn action-gen [{:keys [version os type], :as option}]
   (let [data          (edn/read-string (slurp "resources/data.edn"))
