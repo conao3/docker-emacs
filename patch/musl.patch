@@ -47,7 +47,7 @@ index 5fa152ae5b..91200dc2cc 100644
 
 
 diff --git a/src/Makefile.in b/src/Makefile.in
-index d54670932d..f990d8c8a9 100644
+index d54670932d..90bc559aa8 100644
 --- a/src/Makefile.in
 +++ b/src/Makefile.in
 @@ -398,6 +398,7 @@ base_obj = dispnew.o frame.o scroll.o xdisp.o menu.o $(XMENU_OBJ) window.o \
@@ -58,6 +58,22 @@ index d54670932d..f990d8c8a9 100644
  	$(MSDOS_OBJ) $(MSDOS_X_OBJ) $(NS_OBJ) $(CYGWIN_OBJ) $(FONT_OBJ) \
  	$(W32_OBJ) $(WINDOW_SYSTEM_OBJ) $(XGSELOBJ)
  obj = $(base_obj) $(NS_OBJC_OBJ)
+@@ -532,6 +533,7 @@ emacs$(EXEEXT): temacs$(EXEEXT) \
+ ifeq ($(CANNOT_DUMP),yes)
+ 	ln -f temacs$(EXEEXT) $@
+ else
++	paxmark -r temacs$(EXEEXT)
+ 	LC_ALL=C $(RUN_TEMACS) -batch -l loadup dump
+   ifneq ($(PAXCTL_dumped),)
+ 	$(PAXCTL_dumped) $@
+@@ -737,6 +739,7 @@ bootstrap-emacs$(EXEEXT): temacs$(EXEEXT)
+ ifeq ($(CANNOT_DUMP),yes)
+ 	ln -f temacs$(EXEEXT) $@
+ else
++	paxmark -r temacs$(EXEEXT)
+ 	$(RUN_TEMACS) --batch --load loadup bootstrap
+   ifneq ($(PAXCTL_dumped),)
+ 	$(PAXCTL_dumped) emacs$(EXEEXT)
 
 
 diff --git a/src/gmalloc.c b/src/gmalloc.c
@@ -69,7 +85,7 @@ index 00b8364131..510d154d53 100644
  #define free gfree
  
 -#ifdef CYGWIN
-+#ifdef TRUE
++#if 1
  extern void *bss_sbrk (ptrdiff_t size);
  extern int bss_sbrk_did_unexec;
  extern char bss_sbrk_buffer[];
@@ -78,13 +94,13 @@ index 00b8364131..510d154d53 100644
  {
    void *result;
 -#if defined (CYGWIN)
-+#if TRUE
++#if 1
    if (!DUMPED)
      {
        return bss_sbrk (increment);
      }
  #endif
-+#if FALSE
++#if 0
    result = (void *) __sbrk (increment);
    if (result == (void *) -1)
      return NULL;
