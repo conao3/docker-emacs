@@ -1,0 +1,126 @@
+/*
+ * Copyright (C) 2019 Naoya Yamashita
+ * 
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the Affero GNU General Public License as
+ * published by the Free Software Foundation, either version 3 of the
+ * License, or (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the Affero
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the Affero GNU General Public
+ * License along with this program.
+ * If not, see <https://www.gnu.org/licenses/>.
+ * 
+ * /
+
+diff --git a/configure.ac b/configure.ac
+index cd4d1c0f8e..26ba441108 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -2133,7 +2133,7 @@ doug_lea_malloc=$emacs_cv_var_doug_lea_malloc
+ 
+ system_malloc=$emacs_cv_sanitize_address
+ 
+-hybrid_malloc=
++hybrid_malloc=yes
+ 
+ case "$opsys" in
+   ## darwin ld insists on the use of malloc routines in the System framework.
+
+
+diff --git a/lib-src/Makefile.in b/lib-src/Makefile.in
+index 5fa152ae5b..91200dc2cc 100644
+--- a/lib-src/Makefile.in
++++ b/lib-src/Makefile.in
+@@ -414,7 +414,6 @@ hexl${EXEEXT}: ${srcdir}/hexl.c $(NTLIB) $(config_h)
+ 
+ update-game-score${EXEEXT}: ${srcdir}/update-game-score.c $(NTLIB) $(config_h)
+ 	$(AM_V_CCLD)$(CC) ${ALL_CFLAGS} \
+-	  -DHAVE_SHARED_GAME_DIR="\"$(gamedir)\"" \
+ 	  $< $(NTLIB) $(LOADLIBES) -o $@
+ 
+ emacsclient.res: ../nt/emacsclient.rc $(NTINC)/../icons/emacs.ico
+
+
+diff --git a/src/Makefile.in b/src/Makefile.in
+index d54670932d..f990d8c8a9 100644
+--- a/src/Makefile.in
++++ b/src/Makefile.in
+@@ -398,6 +398,7 @@ base_obj = dispnew.o frame.o scroll.o xdisp.o menu.o $(XMENU_OBJ) window.o \
+ 	doprnt.o intervals.o textprop.o composite.o xml.o $(NOTIFY_OBJ) \
+ 	$(XWIDGETS_OBJ) \
+ 	profiler.o decompress.o \
++	sheap.o \
+ 	$(MSDOS_OBJ) $(MSDOS_X_OBJ) $(NS_OBJ) $(CYGWIN_OBJ) $(FONT_OBJ) \
+ 	$(W32_OBJ) $(WINDOW_SYSTEM_OBJ) $(XGSELOBJ)
+ obj = $(base_obj) $(NS_OBJC_OBJ)
+
+
+diff --git a/src/gmalloc.c b/src/gmalloc.c
+index 00b8364131..510d154d53 100644
+--- a/src/gmalloc.c
++++ b/src/gmalloc.c
+@@ -70,7 +70,7 @@ extern void emacs_abort (void);
+ #define aligned_alloc galigned_alloc
+ #define free gfree
+ 
+-#ifdef CYGWIN
++#ifdef TRUE
+ extern void *bss_sbrk (ptrdiff_t size);
+ extern int bss_sbrk_did_unexec;
+ extern char bss_sbrk_buffer[];
+@@ -1523,16 +1523,19 @@ void *
+ __default_morecore (ptrdiff_t increment)
+ {
+   void *result;
+-#if defined (CYGWIN)
++#if TRUE
+   if (!DUMPED)
+     {
+       return bss_sbrk (increment);
+     }
+ #endif
++#if FALSE
+   result = (void *) __sbrk (increment);
+   if (result == (void *) -1)
+     return NULL;
+   return result;
++#endif
++  return NULL;
+ }
+ /* Copyright (C) 1991, 92, 93, 94, 95, 96 Free Software Foundation, Inc.
+ 
+
+
+diff --git a/src/print.c b/src/print.c
+index 2b53d7580b..04b0b68fab 100644
+--- a/src/print.c
++++ b/src/print.c
+@@ -775,7 +775,7 @@ debug_output_compilation_hack (bool x)
+   print_output_debug_flag = x;
+ }
+ 
+-#if defined (GNU_LINUX)
++#if defined (GNU_LINUX) && defined (__GLIBC__)
+ 
+ /* This functionality is not vitally important in general, so we rely on
+    non-portable ability to use stderr as lvalue.  */
+
+
+diff --git a/src/unexelf.c b/src/unexelf.c
+index 068d268808..68d9361e57 100644
+--- a/src/unexelf.c
++++ b/src/unexelf.c
+@@ -227,5 +227,8 @@ unexec (const char *new_name, const char *old_name)
+   off_t new_file_size;
+   void *new_break;
+ 
++  extern int bss_sbrk_did_unexec;
++  bss_sbrk_did_unexec = 1;
++
+   /* Pointers to the base of the image of the two files.  */
+   caddr_t old_base, new_base;
