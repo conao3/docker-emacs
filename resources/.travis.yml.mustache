@@ -23,6 +23,10 @@ install:
   - docker version
   - make .make/build-${TARGET_IMAGE}
 
+script:
+  - docker login --username=${DOCKER_PASSWORD} --password=${DOCKER_USERNAME}
+  - make .make/push-${TARGET_IMAGE}
+
 # after_success:
 #   - |
 #     # DOCKER_USERNAME is empty for forked repositories
