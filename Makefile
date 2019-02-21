@@ -50,9 +50,6 @@ push: build
 	docker container run -it conao3/emacs:$* emacs --batch --eval "(print emacs-version)"
 	touch $@
 
-.make/push-%: .make/build-%
-	docker push conao3/emacs:$*
-
 ##################################################
 
 $(DIRS):
