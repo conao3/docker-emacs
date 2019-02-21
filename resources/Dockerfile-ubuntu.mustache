@@ -17,58 +17,69 @@
 
 # Image from this Dockerfile tagged as {{{tags}}}
 
+{{#old-emacs}}
 FROM ubuntu:12.04 as dev
+{{/old-emacs}}
+{{^old-emacs}}
+FROM ubuntu:12.04 as dev
+{{/old-emacs}}
 
 RUN apt-get update
 RUN apt-get install -y build-essential
 
-# RUN apt-get install -y libx11-dev
-# RUN apt-get install -y libcanberra-gtk-module
-# RUN apt-get install -y libgtk2.0-dev
+{{^min}}
+RUN apt-get install -y libx11-dev
+RUN apt-get install -y libcanberra-gtk-module
+RUN apt-get install -y libgtk2.0-dev
+RUN apt-get install -y libgpm-dev
+{{/min}}
 RUN apt-get install -y libncurses-dev
-# RUN apt-get install -y libgpm-dev
 
-RUN apt-get install -y git
 RUN apt-get install -y autoconf
 RUN apt-get install -y automake
+RUN apt-get install -y texinfo
+RUN apt-get install -y git
 RUN apt-get install -y curl
 RUN apt-get install -y gnupg
 RUN apt-get install -y openssh-client
-RUN apt-get install -y texinfo
 RUN apt-get install -y libgnutls-dev
 
-# RUN apt-get install -y imagemagick
-# RUN apt-get install -y libmagick++-dev
-# RUN apt-get install -y libxpm-dev
-# RUN apt-get install -y libgif-dev
-# RUN apt-get install -y libjpeg-dev
-# RUN apt-get install -y libpng-dev
-# RUN apt-get install -y libtiff-dev
+{{^min}}
+RUN apt-get install -y imagemagick
+RUN apt-get install -y libmagick++-dev
+RUN apt-get install -y libxpm-dev
+RUN apt-get install -y libgif-dev
+RUN apt-get install -y libjpeg-dev
+RUN apt-get install -y libpng-dev
+RUN apt-get install -y libtiff-dev
+{{/min}}
 
 RUN apt-get install -y libdbus-1-dev
 
 RUN rm -rf /var/lib/apt/lists/*
 
 WORKDIR /opt
-RUN curl -vLO https://ftp.gnu.org/pub/gnu/emacs/emacs-23.4.tar.gz
-RUN tar xf emacs-23.4.tar.gz
-RUN mv -v emacs-23.4 emacs
+RUN curl -vLO https://ftp.gnu.org/pub/gnu/emacs/{{branch}}.tar.gz && \
+tar xf {{branch}}.tar.gz && \
+mv -v {{branch}} emacs && \
+rm {{branch}}.tar.gz
 
-RUN cd /opt/emacs && \
-    ./configure --with-crt-dir=/usr/lib/x86_64-linux-gnu && \
-    make bootstrap && \
-    make install
-
-CMD ["emacs"]
+WORKDIR /opt/emacs
+RUN ./configure --with-crt-dir=/usr/lib/x86_64-linux-gnu
+RUN make bootstrap
+RUN make install
 
 # ------------------------------------------------------------
 
 FROM ubuntu:12.04
 
 RUN apt-get update
-# RUN apt-get install -y libx11-6
-# RUN apt-get install -y libgtk2.0-0
-# RUN apt-get install -y libcanberra-gtk-module
+
+{{^min}}
+RUN apt-get install -y libx11-6
+RUN apt-get install -y libgtk2.0-0
+RUN apt-get install -y libcanberra-gtk-module
+{{/min}}
 RUN apt-get install -y libncurses5
 
 RUN apt-get install -y curl
@@ -79,18 +90,17 @@ RUN apt-get install -y libsm6
 RUN apt-get install -y openssh-client
 RUN apt-get install -y texinfo
 
-# RUN apt-get install -y imagemagick
-# RUN apt-get install -y libmagick++4
-# RUN apt-get install -y libgif4
-# RUN apt-get install -y libjpeg8
-# RUN apt-get install -y libxpm4
-# RUN apt-get install -y libtiff4
-# RUN apt-get install -y libpng12-0
+{{^min}}
+RUN apt-get install -y imagemagick
+RUN apt-get install -y libmagick++4
+RUN apt-get install -y libgif4
+RUN apt-get install -y libjpeg8
+RUN apt-get install -y libxpm4
+RUN apt-get install -y libtiff4
+RUN apt-get install -y libpng12-0
+{{/min}}
 
 RUN rm -rf /var/lib/apt/lists/*
-
-ENV EMACS_BRANCH="emacs-23.4"
-ENV EMACS_VERSION="23.4"
 
 COPY --from=0 /usr/local /usr/local
 
