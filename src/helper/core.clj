@@ -50,6 +50,7 @@
         "Actions:"
         "  gen      Generate Dockerfiles, Project readme"
         "  build    Build docker images"
+        "  push     Push image toDocker Hub"
         ""
         "Options:"
         options-summary
@@ -76,7 +77,7 @@
 
       ;; custom validation on arguments
       (and (= 1 (count arguments))
-           (#{"gen" "build"} (first arguments)))
+           (#{"gen" "build" "push"} (first arguments)))
       {:action (first arguments) :options options}
 
       :else ; failed custom validation => exit with usage summary
@@ -162,6 +163,29 @@
                ".")))
     (println (format "Complete build %s" "conao3/emacs:alpine-23.4-min"))))
 
+(defn action-push [{:keys [version os type], :as option}]
+  (let [data          (edn/read-string (slurp "resources/data.edn"))
+        param-os      (if (not (= os "all"))
+                        #{os}
+                        #{"alpine" "ubuntu"})
+        param-version (if (not (= version "all"))
+                        #{version}
+                        #{"26.1"
+                          "25.1" "25.2" "25.3"
+                          "24.1" "24.2" "24.3" "24.4" "24.5"
+                          "23.3" "23.4"})
+        param-type    (if (not (= type "all"))
+                        #{type}
+                        #{"min"})]
+
+    (println (format "Start push %s" "conao3/emacs:alpine-23.4-min"))
+    (println
+     (:out (sh "docker" "image" "build"
+               "-t" "conao3/emacs:alpine-23.4-min"
+               "-f" "Dockerfiles/Dockerfile-alpine-23.4-min"
+               ".")))
+    (println (format "Complete build %s" "conao3/emacs:alpine-23.4-min"))))
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defn -main
@@ -172,4 +196,5 @@
       (exit (if ok? 0 1) exit-message)
       (case action
         "gen"     (action-gen options)
-        "build"   (action-build options)))))
+        "build"   (action-build options)
+        "push"    (action-push options)))))
