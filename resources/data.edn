@@ -16,7 +16,25 @@
 ;; License along with this program.
 ;; If not, see <https://www.gnu.org/licenses/>.
 
-({:id "alpine-26.1-min" :os "alpine" :version "26.1" :branch "emacs-26.1" :type "min" :tags #{"alpine-26.1-min 26.1-alpine-min"}}
+(;; normal images
+ {:id "alpine-26.1-normal" :os "alpine" :version "26.1" :branch "emacs-26.1" :type "normal" :tags #{"alpine-26.1 26.1-alpine"}}
+ {:id "alpine-25.3-normal" :os "alpine" :version "25.3" :branch "emacs-25.3" :type "normal" :tags #{"alpine-25.3 25.3-alpine"}}
+ {:id "alpine-25.2-normal" :os "alpine" :version "25.2" :branch "emacs-25.2" :type "normal" :tags #{"alpine-25.2 25.2-alpine"}}
+
+ {:id "ubuntu-26.1-normal" :os "ubuntu" :version "26.1" :branch "emacs-26.1" :type "normal" :tags #{"ubuntu-26.1 26.1"}}
+ {:id "ubuntu-25.3-normal" :os "ubuntu" :version "25.3" :branch "emacs-25.3" :type "normal" :tags #{"ubuntu-25.3 25.3"}}
+ {:id "ubuntu-25.2-normal" :os "ubuntu" :version "25.2" :branch "emacs-25.2" :type "normal" :tags #{"ubuntu-25.2 25.2"}}
+ {:id "ubuntu-25.1-normal" :os "ubuntu" :version "25.1" :branch "emacs-25.1" :type "normal" :tags #{"ubuntu-25.1 25.1"}}
+ {:id "ubuntu-24.5-normal" :os "ubuntu" :version "24.5" :branch "emacs-24.5" :type "normal" :tags #{"ubuntu-24.5 24.5"}}
+ {:id "ubuntu-24.4-normal" :os "ubuntu" :version "24.4" :branch "emacs-24.4" :type "normal" :tags #{"ubuntu-24.4 24.4"} :old-emacs true}
+ {:id "ubuntu-24.3-normal" :os "ubuntu" :version "24.3" :branch "emacs-24.3" :type "normal" :tags #{"ubuntu-24.3 24.3"} :old-emacs true}
+ {:id "ubuntu-24.2-normal" :os "ubuntu" :version "24.2" :branch "emacs-24.2" :type "normal" :tags #{"ubuntu-24.2 24.2"} :old-emacs true}
+ {:id "ubuntu-24.1-normal" :os "ubuntu" :version "24.1" :branch "emacs-24.1" :type "normal" :tags #{"ubuntu-24.1 24.1"} :old-emacs true}
+ {:id "ubuntu-23.4-normal" :os "ubuntu" :version "23.4" :branch "emacs-23.4" :type "normal" :tags #{"ubuntu-23.4 23.4"} :old-emacs true}
+ {:id "ubuntu-23.3-normal" :os "ubuntu" :version "23.3" :branch "emacs-23.3" :type "normal" :tags #{"ubuntu-23.3 23.3"} :old-emacs true}
+
+ ;; min images
+ {:id "alpine-26.1-min" :os "alpine" :version "26.1" :branch "emacs-26.1" :type "min" :tags #{"alpine-26.1-min 26.1-alpine-min"}}
  {:id "alpine-25.3-min" :os "alpine" :version "25.3" :branch "emacs-25.3" :type "min" :tags #{"alpine-25.3-min 25.3-alpine-min"}}
  {:id "alpine-25.2-min" :os "alpine" :version "25.2" :branch "emacs-25.2" :type "min" :tags #{"alpine-25.2-min 25.2-alpine-min"}}
                                                                                                                 
