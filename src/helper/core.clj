@@ -112,7 +112,7 @@
                           "23.3" "23.4"})
         param-type    (if (not (= type "all"))
                         #{type}
-                        #{"min"})]
+                        #{"normal" "min"})]
 
     ;; generate Dockerfiles
     (run! (fn [os]

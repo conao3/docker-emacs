@@ -15,13 +15,15 @@
 
 #
 
-# Image from this Dockerfile tagged as #{"alpine-25.3-min 25.3-alpine-min"}
+# Image from this Dockerfile tagged as #{"alpine-25.2 25.2-alpine"}
 
 FROM alpine:3.9 as dev
 
 RUN apk update && apk upgrade
 RUN apk add alpine-sdk
 
+RUN apk add gtk+3.0-dev
+RUN apk add libcanberra-gtk3
 RUN apk add ncurses-dev
 
 RUN apk add autoconf
@@ -35,11 +37,23 @@ RUN apk add gnutls-dev
 
 RUN apk add paxmark
 
+RUN apk add libxml2-dev
+RUN apk add libjpeg-turbo-dev
+RUN apk add libpng-dev
+RUN apk add librsvg-dev
+RUN apk add libxaw-dev
+RUN apk add giflib-dev
+RUN apk add tiff-dev
+
+RUN apk add dpkg-dev
+RUN apk add gconf-dev
+RUN apk add pango-dev
+RUN apk add alsa-lib-dev
 WORKDIR /opt
-RUN curl -vLO http://git.savannah.gnu.org/cgit/emacs.git/snapshot/emacs-25.3.tar.gz && \
-        tar xvf emacs-25.3.tar.gz && \
-        mv -v emacs-25.3 emacs && \
-        rm -rf emacs-25.3.tar.gz
+RUN curl -vLO http://git.savannah.gnu.org/cgit/emacs.git/snapshot/emacs-25.2.tar.gz && \
+        tar xvf emacs-25.2.tar.gz && \
+        mv -v emacs-25.2 emacs && \
+        rm -rf emacs-25.2.tar.gz
 
 WORKDIR /opt/emacs
 
@@ -55,10 +69,21 @@ CMD ["emacs"]
 FROM alpine:3.9
 
 RUN apk update && apk upgrade
+RUN apk add gtk+3.0
+RUN apk add libcanberra-gtk3
 RUN apk add curl
 RUN apk add gnupg
 RUN apk add openssh-client
 
+RUN apk add librsvg
+RUN apk add libxpm
+RUN apk add giflib
+RUN apk add tiff
+
+RUN apk add desktop-file-utils
+
+RUN apk add gconf
+RUN apk add alsa-lib
 COPY --from=0 /usr/local /usr/local
 
 CMD ["emacs"]
