@@ -55,8 +55,8 @@ RUN curl -vLO http://git.savannah.gnu.org/cgit/emacs.git/snapshot/emacs-25.2.tar
         mv -v emacs-25.2 emacs && \
         rm -rf emacs-25.2.tar.gz
 
-COPY patch/musl.patch /opt/emacs/musl.patch
 WORKDIR /opt/emacs
+COPY patch/musl.patch /opt/emacs/musl.patch
 RUN patch -p1 < musl.patch
 RUN ./autogen.sh && ./configure &&  make -j install
 

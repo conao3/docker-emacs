@@ -20,6 +20,7 @@ This project provides different docker images:
 | `#{"alpine-26.1 26.1-alpine"}` | [(Dockerfiles/Dockerfile-alpine-26.1-normal)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-alpine-26.1-normal) |
 | `#{"alpine-25.3 25.3-alpine"}` | [(Dockerfiles/Dockerfile-alpine-25.3-normal)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-alpine-25.3-normal) |
 | `#{"alpine-25.2 25.2-alpine"}` | [(Dockerfiles/Dockerfile-alpine-25.2-normal)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-alpine-25.2-normal) |
+| `#{"alpine-25.1 25.1-alpine"}` | [(Dockerfiles/Dockerfile-alpine-25.1-normal)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-alpine-25.1-normal) |
 | `#{"ubuntu-26.1 26.1"}` | [(Dockerfiles/Dockerfile-ubuntu-26.1-normal)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-26.1-normal) |
 | `#{"ubuntu-25.3 25.3"}` | [(Dockerfiles/Dockerfile-ubuntu-25.3-normal)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-25.3-normal) |
 | `#{"ubuntu-25.2 25.2"}` | [(Dockerfiles/Dockerfile-ubuntu-25.2-normal)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-25.2-normal) |
@@ -33,6 +34,7 @@ This project provides different docker images:
 | `#{"alpine-26.1-min 26.1-alpine-min"}` | [(Dockerfiles/Dockerfile-alpine-26.1-min)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-alpine-26.1-min) |
 | `#{"alpine-25.3-min 25.3-alpine-min"}` | [(Dockerfiles/Dockerfile-alpine-25.3-min)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-alpine-25.3-min) |
 | `#{"alpine-25.2-min 25.2-alpine-min"}` | [(Dockerfiles/Dockerfile-alpine-25.2-min)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-alpine-25.2-min) |
+| `#{"alpine-25.1-min 25.1-alpine"}` | [(Dockerfiles/Dockerfile-alpine-25.1-min)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-alpine-25.1-min) |
 | `#{"ubuntu-26.1-min 26.1-min"}` | [(Dockerfiles/Dockerfile-ubuntu-26.1-min)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-26.1-min) |
 | `#{"ubuntu-25.3-min 25.3-min"}` | [(Dockerfiles/Dockerfile-ubuntu-25.3-min)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-25.3-min) |
 | `#{"ubuntu-25.2-min 25.2-min"}` | [(Dockerfiles/Dockerfile-ubuntu-25.2-min)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-25.2-min) |
