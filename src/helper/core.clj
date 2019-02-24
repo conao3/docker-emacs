@@ -180,10 +180,7 @@
 
     (println (format "Start push %s" "conao3/emacs:alpine-23.4-min"))
     (println
-     (:out (sh "docker" "image" "build"
-               "-t" "conao3/emacs:alpine-23.4-min"
-               "-f" "Dockerfiles/Dockerfile-alpine-23.4-min"
-               ".")))
+     (:out (sh "docker" "push" "conao3/emacs:alpine-26.1-min")))
     (println (format "Complete build %s" "conao3/emacs:alpine-23.4-min"))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
