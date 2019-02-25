@@ -20,7 +20,7 @@
  {:id "alpine-normal-26.1" :os "alpine" :version "26.1" :branch "emacs-26.1" :type "normal" :normal true :tags ["alpine-normal-26.1" "26.1-alpine-normal" "26.1-alpine" "26-alpine"]}
  {:id "alpine-normal-25.3" :os "alpine" :version "25.3" :branch "emacs-25.3" :type "normal" :normal true :tags ["alpine-normal-25.3" "25.3-alpine-normal" "25.3-alpine" "25-alpine"] :musl-patch true}
  {:id "alpine-normal-25.2" :os "alpine" :version "25.2" :branch "emacs-25.2" :type "normal" :normal true :tags ["alpine-normal-25.2" "25.2-alpine-normal" "25.2-alpine"            ] :musl-patch true}
-                                                                                                                              
+
  {:id "ubuntu-normal-26.1" :os "ubuntu" :version "26.1" :branch "emacs-26.1" :type "normal" :normal true :tags ["ubuntu-normal-26.1" "26.1-normal" "26.1" "26-normal" "26"]}
  {:id "ubuntu-normal-25.3" :os "ubuntu" :version "25.3" :branch "emacs-25.3" :type "normal" :normal true :tags ["ubuntu-normal-25.3" "25.3-normal" "25.3" "25-normal" "25"]}
  {:id "ubuntu-normal-25.2" :os "ubuntu" :version "25.2" :branch "emacs-25.2" :type "normal" :normal true :tags ["ubuntu-normal-25.2" "25.2-normal" "25.2"                 ]}
@@ -37,7 +37,7 @@
  {:id "alpine-min-26.1" :os "alpine" :version "26.1" :branch "emacs-26.1" :type "min" :min true :tags ["alpine-min-26.1" "26.1-alpine-min" "26-alpine-min"]}
  {:id "alpine-min-25.3" :os "alpine" :version "25.3" :branch "emacs-25.3" :type "min" :min true :tags ["alpine-min-25.3" "25.3-alpine-min" "25-alpine-min"] :musl-patch true}
  {:id "alpine-min-25.2" :os "alpine" :version "25.2" :branch "emacs-25.2" :type "min" :min true :tags ["alpine-min-25.2" "25.2-alpine-min"                ] :musl-patch true}
-                                                                                                                  
+
  {:id "ubuntu-min-26.1" :os "ubuntu" :version "26.1" :branch "emacs-26.1" :type "min" :min true :tags ["ubuntu-min-26.1" "26.1-min" "26-min"]}
  {:id "ubuntu-min-25.3" :os "ubuntu" :version "25.3" :branch "emacs-25.3" :type "min" :min true :tags ["ubuntu-min-25.3" "25.3-min" "25-min"]}
  {:id "ubuntu-min-25.2" :os "ubuntu" :version "25.2" :branch "emacs-25.2" :type "min" :min true :tags ["ubuntu-min-25.2" "25.2-min"         ]}
