@@ -15,7 +15,7 @@
 
 #
 
-# Image from this Dockerfile tagged as ["ubuntu-normal-24.5" "24.5-normal" "24.5" "24-normal" "24"]
+# Image from this Dockerfile tagged as ["ubuntu-std-23.4" "23.4-std" "23.4" "23-std" "23"]
 
 FROM ubuntu:12.04 as dev
 RUN apt-get update
@@ -48,10 +48,10 @@ RUN apt-get install -y libdbus-1-dev
 RUN rm -rf /var/lib/apt/lists/*
 
 WORKDIR /opt
-RUN curl -vLO https://ftp.gnu.org/pub/gnu/emacs/emacs-24.5.tar.gz && \
-tar xf emacs-24.5.tar.gz && \
-mv -v emacs-24.5 emacs && \
-rm emacs-24.5.tar.gz
+RUN curl -vLO https://ftp.gnu.org/pub/gnu/emacs/emacs-23.4.tar.gz && \
+tar xf emacs-23.4.tar.gz && \
+mv -v emacs-23.4 emacs && \
+rm emacs-23.4.tar.gz
 
 WORKDIR /opt/emacs
 RUN ./configure --with-crt-dir=/usr/lib/x86_64-linux-gnu
