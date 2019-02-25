@@ -96,8 +96,7 @@
   (let [readfile  (format "Dockerfile-%s.mustache" os)
         writefile (format "../Dockerfiles/Dockerfile-%s-%s-%s" os version type)]
     (spit writefile
-          (render-resource readfile (merge option
-                                           {(keyword type) true})))
+          (render-resource readfile option))
     (println (format "Wrote %s" writefile))))
 
 (defn action-gen [{:keys [version os type], :as option}]
