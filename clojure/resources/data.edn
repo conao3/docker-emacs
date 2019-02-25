@@ -17,36 +17,36 @@
 ;; If not, see <https://www.gnu.org/licenses/>.
 
 [;; normal images
- {:id "alpine-normal-26.1" :os "alpine" :version "26.1" :branch "emacs-26.1" :type "normal" :normal true :tags ["alpine-26.1-normal" "alpine-26.1" "26.1-alpine"]}
- {:id "alpine-normal-25.3" :os "alpine" :version "25.3" :branch "emacs-25.3" :type "normal" :normal true :tags ["alpine-25.3-normal" "alpine-25.3" "25.3-alpine"] :musl-patch true}
- {:id "alpine-normal-25.2" :os "alpine" :version "25.2" :branch "emacs-25.2" :type "normal" :normal true :tags ["alpine-25.2-normal" "alpine-25.2" "25.2-alpine"] :musl-patch true}
-                    
- {:id "ubuntu-normal-26.1" :os "ubuntu" :version "26.1" :branch "emacs-26.1" :type "normal" :normal true :tags ["ubuntu-26.1-normal" "ubuntu-26.1" "26.1"]}
- {:id "ubuntu-normal-25.3" :os "ubuntu" :version "25.3" :branch "emacs-25.3" :type "normal" :normal true :tags ["ubuntu-25.3-normal" "ubuntu-25.3" "25.3"]}
- {:id "ubuntu-normal-25.2" :os "ubuntu" :version "25.2" :branch "emacs-25.2" :type "normal" :normal true :tags ["ubuntu-25.2-normal" "ubuntu-25.2" "25.2"]}
- {:id "ubuntu-normal-25.1" :os "ubuntu" :version "25.1" :branch "emacs-25.1" :type "normal" :normal true :tags ["ubuntu-25.1-normal" "ubuntu-25.1" "25.1"]}
- {:id "ubuntu-normal-24.5" :os "ubuntu" :version "24.5" :branch "emacs-24.5" :type "normal" :normal true :tags ["ubuntu-24.5-normal" "ubuntu-24.5" "24.5"]}
- {:id "ubuntu-normal-24.4" :os "ubuntu" :version "24.4" :branch "emacs-24.4" :type "normal" :normal true :tags ["ubuntu-24.4-normal" "ubuntu-24.4" "24.4"] :old-emacs true}
- {:id "ubuntu-normal-24.3" :os "ubuntu" :version "24.3" :branch "emacs-24.3" :type "normal" :normal true :tags ["ubuntu-24.3-normal" "ubuntu-24.3" "24.3"] :old-emacs true}
- {:id "ubuntu-normal-24.2" :os "ubuntu" :version "24.2" :branch "emacs-24.2" :type "normal" :normal true :tags ["ubuntu-24.2-normal" "ubuntu-24.2" "24.2"] :old-emacs true}
- {:id "ubuntu-normal-24.1" :os "ubuntu" :version "24.1" :branch "emacs-24.1" :type "normal" :normal true :tags ["ubuntu-24.1-normal" "ubuntu-24.1" "24.1"] :old-emacs true}
- {:id "ubuntu-normal-23.4" :os "ubuntu" :version "23.4" :branch "emacs-23.4" :type "normal" :normal true :tags ["ubuntu-23.4-normal" "ubuntu-23.4" "23.4"] :old-emacs true}
+ {:id "alpine-normal-26.1" :os "alpine" :version "26.1" :branch "emacs-26.1" :type "normal" :normal true :tags ["alpine-normal-26.1" "26.1-alpine-normal" "26.1-alpine" "26-alpine"]}
+ {:id "alpine-normal-25.3" :os "alpine" :version "25.3" :branch "emacs-25.3" :type "normal" :normal true :tags ["alpine-normal-25.3" "25.3-alpine-normal" "25.3-alpine" "25-alpine"] :musl-patch true}
+ {:id "alpine-normal-25.2" :os "alpine" :version "25.2" :branch "emacs-25.2" :type "normal" :normal true :tags ["alpine-normal-25.2" "25.2-alpine-normal" "25.2-alpine"            ] :musl-patch true}
+                                                                                                                              
+ {:id "ubuntu-normal-26.1" :os "ubuntu" :version "26.1" :branch "emacs-26.1" :type "normal" :normal true :tags ["ubuntu-normal-26.1" "26.1-normal" "26.1" "26-normal" "26"]}
+ {:id "ubuntu-normal-25.3" :os "ubuntu" :version "25.3" :branch "emacs-25.3" :type "normal" :normal true :tags ["ubuntu-normal-25.3" "25.3-normal" "25.3" "25-normal" "25"]}
+ {:id "ubuntu-normal-25.2" :os "ubuntu" :version "25.2" :branch "emacs-25.2" :type "normal" :normal true :tags ["ubuntu-normal-25.2" "25.2-normal" "25.2"                 ]}
+ {:id "ubuntu-normal-25.1" :os "ubuntu" :version "25.1" :branch "emacs-25.1" :type "normal" :normal true :tags ["ubuntu-normal-25.1" "25.1-normal" "25.1"                 ]}
+ {:id "ubuntu-normal-24.5" :os "ubuntu" :version "24.5" :branch "emacs-24.5" :type "normal" :normal true :tags ["ubuntu-normal-24.5" "24.5-normal" "24.5" "24-normal" "24"]}
+ {:id "ubuntu-normal-24.4" :os "ubuntu" :version "24.4" :branch "emacs-24.4" :type "normal" :normal true :tags ["ubuntu-normal-24.4" "24.4-normal" "24.4"                 ] :old-emacs true}
+ {:id "ubuntu-normal-24.3" :os "ubuntu" :version "24.3" :branch "emacs-24.3" :type "normal" :normal true :tags ["ubuntu-normal-24.3" "24.3-normal" "24.3"                 ] :old-emacs true}
+ {:id "ubuntu-normal-24.2" :os "ubuntu" :version "24.2" :branch "emacs-24.2" :type "normal" :normal true :tags ["ubuntu-normal-24.2" "24.2-normal" "24.2"                 ] :old-emacs true}
+ {:id "ubuntu-normal-24.1" :os "ubuntu" :version "24.1" :branch "emacs-24.1" :type "normal" :normal true :tags ["ubuntu-normal-24.1" "24.1-normal" "24.1"                 ] :old-emacs true}
+ {:id "ubuntu-normal-23.4" :os "ubuntu" :version "23.4" :branch "emacs-23.4" :type "normal" :normal true :tags ["ubuntu-normal-23.4" "23.4-normal" "23.4" "23-normal" "23"] :old-emacs true}
  ;; {:id "ubuntu-23.3-normal" :os "ubuntu" :version "23.3" :branch "emacs-23.3" :type "normal" :tags #{"ubuntu-23.3 23.3"} :old-emacs true}
 
  ;; min images
- {:id "alpine-min-26.1" :os "alpine" :version "26.1" :branch "emacs-26.1" :type "min" :min true :tags ["alpine-26.1-min" "26.1-alpine-min"]}
- {:id "alpine-min-25.3" :os "alpine" :version "25.3" :branch "emacs-25.3" :type "min" :min true :tags ["alpine-25.3-min" "25.3-alpine-min"] :musl-patch true}
- {:id "alpine-min-25.2" :os "alpine" :version "25.2" :branch "emacs-25.2" :type "min" :min true :tags ["alpine-25.2-min" "25.2-alpine-min"] :musl-patch true}
-
- {:id "ubuntu-min-26.1" :os "ubuntu" :version "26.1" :branch "emacs-26.1" :type "min" :min true :tags ["ubuntu-26.1-min" "26.1-min"]}
- {:id "ubuntu-min-25.3" :os "ubuntu" :version "25.3" :branch "emacs-25.3" :type "min" :min true :tags ["ubuntu-25.3-min" "25.3-min"]}
- {:id "ubuntu-min-25.2" :os "ubuntu" :version "25.2" :branch "emacs-25.2" :type "min" :min true :tags ["ubuntu-25.2-min" "25.2-min"]}
- {:id "ubuntu-min-25.1" :os "ubuntu" :version "25.1" :branch "emacs-25.1" :type "min" :min true :tags ["ubuntu-25.1-min" "25.1-min"]}
- {:id "ubuntu-min-24.5" :os "ubuntu" :version "24.5" :branch "emacs-24.5" :type "min" :min true :tags ["ubuntu-24.5-min" "24.5-min"]}
- {:id "ubuntu-min-24.4" :os "ubuntu" :version "24.4" :branch "emacs-24.4" :type "min" :min true :tags ["ubuntu-24.4-min" "24.4-min"] :old-emacs true}
- {:id "ubuntu-min-24.3" :os "ubuntu" :version "24.3" :branch "emacs-24.3" :type "min" :min true :tags ["ubuntu-24.3-min" "24.3-min"] :old-emacs true}
- {:id "ubuntu-min-24.2" :os "ubuntu" :version "24.2" :branch "emacs-24.2" :type "min" :min true :tags ["ubuntu-24.2-min" "24.2-min"] :old-emacs true}
- {:id "ubuntu-min-24.1" :os "ubuntu" :version "24.1" :branch "emacs-24.1" :type "min" :min true :tags ["ubuntu-24.1-min" "24.1-min"] :old-emacs true}
- {:id "ubuntu-min-23.4" :os "ubuntu" :version "23.4" :branch "emacs-23.4" :type "min" :min true :tags ["ubuntu-23.4-min" "23.4-min"] :old-emacs true}
+ {:id "alpine-min-26.1" :os "alpine" :version "26.1" :branch "emacs-26.1" :type "min" :min true :tags ["alpine-min-26.1" "26.1-alpine-min" "26-alpine-min"]}
+ {:id "alpine-min-25.3" :os "alpine" :version "25.3" :branch "emacs-25.3" :type "min" :min true :tags ["alpine-min-25.3" "25.3-alpine-min" "25-alpine-min"] :musl-patch true}
+ {:id "alpine-min-25.2" :os "alpine" :version "25.2" :branch "emacs-25.2" :type "min" :min true :tags ["alpine-min-25.2" "25.2-alpine-min"                ] :musl-patch true}
+                                                                                                                  
+ {:id "ubuntu-min-26.1" :os "ubuntu" :version "26.1" :branch "emacs-26.1" :type "min" :min true :tags ["ubuntu-min-26.1" "26.1-min" "26-min"]}
+ {:id "ubuntu-min-25.3" :os "ubuntu" :version "25.3" :branch "emacs-25.3" :type "min" :min true :tags ["ubuntu-min-25.3" "25.3-min" "25-min"]}
+ {:id "ubuntu-min-25.2" :os "ubuntu" :version "25.2" :branch "emacs-25.2" :type "min" :min true :tags ["ubuntu-min-25.2" "25.2-min"         ]}
+ {:id "ubuntu-min-25.1" :os "ubuntu" :version "25.1" :branch "emacs-25.1" :type "min" :min true :tags ["ubuntu-min-25.1" "25.1-min"         ]}
+ {:id "ubuntu-min-24.5" :os "ubuntu" :version "24.5" :branch "emacs-24.5" :type "min" :min true :tags ["ubuntu-min-24.5" "24.5-min" "24-min"]}
+ {:id "ubuntu-min-24.4" :os "ubuntu" :version "24.4" :branch "emacs-24.4" :type "min" :min true :tags ["ubuntu-min-24.4" "24.4-min"         ] :old-emacs true}
+ {:id "ubuntu-min-24.3" :os "ubuntu" :version "24.3" :branch "emacs-24.3" :type "min" :min true :tags ["ubuntu-min-24.3" "24.3-min"         ] :old-emacs true}
+ {:id "ubuntu-min-24.2" :os "ubuntu" :version "24.2" :branch "emacs-24.2" :type "min" :min true :tags ["ubuntu-min-24.2" "24.2-min"         ] :old-emacs true}
+ {:id "ubuntu-min-24.1" :os "ubuntu" :version "24.1" :branch "emacs-24.1" :type "min" :min true :tags ["ubuntu-min-24.1" "24.1-min"         ] :old-emacs true}
+ {:id "ubuntu-min-23.4" :os "ubuntu" :version "23.4" :branch "emacs-23.4" :type "min" :min true :tags ["ubuntu-min-23.4" "23.4-min" "23-min"] :old-emacs true}
  ;; {:id "ubuntu-23.3-min" :os "ubuntu" :version "23.3" :branch "emacs-23.3" :type "min" :tags #{"ubuntu-23.3-min 23.3-min"} :old-emacs true}
  ]
