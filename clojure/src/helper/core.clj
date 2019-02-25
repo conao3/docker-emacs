@@ -103,27 +103,24 @@
 (defn action-gen [{:keys [version os type], :as option}]
   (let [data          (edn/read-string (slurp "resources/data.edn"))
         param-os      (if (not (= os "all"))
-                        #{os}
-                        #{"alpine" "ubuntu"})
+                        [os]
+                        ["alpine" "ubuntu"])
         param-version (if (not (= version "all"))
-                        #{version}
-                        #{"26.1"
+                        [version]
+                        ["26.1"
                           "25.1" "25.2" "25.3"
                           "24.1" "24.2" "24.3" "24.4" "24.5"
-                          "23.3" "23.4"})
+                          "23.3" "23.4"])
         param-type    (if (not (= type "all"))
-                        #{type}
-                        #{"normal" "min"})]
+                        [type]
+                        ["normal" "min"])]
 
     ;; generate Dockerfiles
-    (run! (fn [os]
-            (run! (fn [version]
-                    (run! (fn [type]
-                            (when-let
-                                [it (some #(when (= (:id %) (join "-" [os version type])) %)
-                                          data)]
-                              (gen-dockerfiles it)))
-                          param-type)) param-version)) param-os)
+    (doseq [os      param-os
+            type    param-type
+            version param-version]
+      (when-let [it (some #(when (= (:id %) (join "-" [os version type])) %) data)]
+        (gen-dockerfiles it)))
 
     ;; generate readme
     (spit "../README.md"
