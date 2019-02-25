@@ -17,32 +17,32 @@ This project provides different docker images:
 
 | Tags         | Dockerfile |
 |--------------|------------|
-| `["alpine-std-26.1" "26.1-alpine-std" "26.1-alpine" "26-alpine"]` | [(Dockerfile)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-alpine-std-26.1) |
-| `["alpine-std-25.3" "25.3-alpine-std" "25.3-alpine" "25-alpine"]` | [(Dockerfile)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-alpine-std-25.3) |
-| `["alpine-std-25.2" "25.2-alpine-std" "25.2-alpine"]` | [(Dockerfile)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-alpine-std-25.2) |
-| `["ubuntu-std-26.1" "26.1-std" "26.1" "26-std" "26"]` | [(Dockerfile)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-std-26.1) |
-| `["ubuntu-std-25.3" "25.3-std" "25.3" "25-std" "25"]` | [(Dockerfile)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-std-25.3) |
-| `["ubuntu-std-25.2" "25.2-std" "25.2"]` | [(Dockerfile)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-std-25.2) |
-| `["ubuntu-std-25.1" "25.1-std" "25.1"]` | [(Dockerfile)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-std-25.1) |
-| `["ubuntu-std-24.5" "24.5-std" "24.5" "24-std" "24"]` | [(Dockerfile)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-std-24.5) |
-| `["ubuntu-std-24.4" "24.4-std" "24.4"]` | [(Dockerfile)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-std-24.4) |
-| `["ubuntu-std-24.3" "24.3-std" "24.3"]` | [(Dockerfile)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-std-24.3) |
-| `["ubuntu-std-24.2" "24.2-std" "24.2"]` | [(Dockerfile)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-std-24.2) |
-| `["ubuntu-std-24.1" "24.1-std" "24.1"]` | [(Dockerfile)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-std-24.1) |
-| `["ubuntu-std-23.4" "23.4-std" "23.4" "23-std" "23"]` | [(Dockerfile)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-std-23.4) |
-| `["alpine-min-26.1" "26.1-alpine-min" "26-alpine-min"]` | [(Dockerfile)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-alpine-min-26.1) |
-| `["alpine-min-25.3" "25.3-alpine-min" "25-alpine-min"]` | [(Dockerfile)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-alpine-min-25.3) |
-| `["alpine-min-25.2" "25.2-alpine-min"]` | [(Dockerfile)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-alpine-min-25.2) |
-| `["ubuntu-min-26.1" "26.1-min" "26-min"]` | [(Dockerfile)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-min-26.1) |
-| `["ubuntu-min-25.3" "25.3-min" "25-min"]` | [(Dockerfile)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-min-25.3) |
-| `["ubuntu-min-25.2" "25.2-min"]` | [(Dockerfile)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-min-25.2) |
-| `["ubuntu-min-25.1" "25.1-min"]` | [(Dockerfile)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-min-25.1) |
-| `["ubuntu-min-24.5" "24.5-min" "24-min"]` | [(Dockerfile)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-min-24.5) |
-| `["ubuntu-min-24.4" "24.4-min"]` | [(Dockerfile)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-min-24.4) |
-| `["ubuntu-min-24.3" "24.3-min"]` | [(Dockerfile)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-min-24.3) |
-| `["ubuntu-min-24.2" "24.2-min"]` | [(Dockerfile)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-min-24.2) |
-| `["ubuntu-min-24.1" "24.1-min"]` | [(Dockerfile)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-min-24.1) |
-| `["ubuntu-min-23.4" "23.4-min" "23-min"]` | [(Dockerfile)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-min-23.4) |
+| `["alpine-std-26.1" "26.1-alpine-std" "26.1-alpine" "26-alpine"]` | [Dockerfile](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-alpine-std-26.1) |
+| `["alpine-std-25.3" "25.3-alpine-std" "25.3-alpine" "25-alpine"]` | [Dockerfile](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-alpine-std-25.3) |
+| `["alpine-std-25.2" "25.2-alpine-std" "25.2-alpine"]` | [Dockerfile](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-alpine-std-25.2) |
+| `["ubuntu-std-26.1" "26.1-std" "26.1" "26-std" "26"]` | [Dockerfile](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-std-26.1) |
+| `["ubuntu-std-25.3" "25.3-std" "25.3" "25-std" "25"]` | [Dockerfile](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-std-25.3) |
+| `["ubuntu-std-25.2" "25.2-std" "25.2"]` | [Dockerfile](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-std-25.2) |
+| `["ubuntu-std-25.1" "25.1-std" "25.1"]` | [Dockerfile](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-std-25.1) |
+| `["ubuntu-std-24.5" "24.5-std" "24.5" "24-std" "24"]` | [Dockerfile](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-std-24.5) |
+| `["ubuntu-std-24.4" "24.4-std" "24.4"]` | [Dockerfile](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-std-24.4) |
+| `["ubuntu-std-24.3" "24.3-std" "24.3"]` | [Dockerfile](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-std-24.3) |
+| `["ubuntu-std-24.2" "24.2-std" "24.2"]` | [Dockerfile](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-std-24.2) |
+| `["ubuntu-std-24.1" "24.1-std" "24.1"]` | [Dockerfile](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-std-24.1) |
+| `["ubuntu-std-23.4" "23.4-std" "23.4" "23-std" "23"]` | [Dockerfile](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-std-23.4) |
+| `["alpine-min-26.1" "26.1-alpine-min" "26-alpine-min"]` | [Dockerfile](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-alpine-min-26.1) |
+| `["alpine-min-25.3" "25.3-alpine-min" "25-alpine-min"]` | [Dockerfile](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-alpine-min-25.3) |
+| `["alpine-min-25.2" "25.2-alpine-min"]` | [Dockerfile](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-alpine-min-25.2) |
+| `["ubuntu-min-26.1" "26.1-min" "26-min"]` | [Dockerfile](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-min-26.1) |
+| `["ubuntu-min-25.3" "25.3-min" "25-min"]` | [Dockerfile](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-min-25.3) |
+| `["ubuntu-min-25.2" "25.2-min"]` | [Dockerfile](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-min-25.2) |
+| `["ubuntu-min-25.1" "25.1-min"]` | [Dockerfile](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-min-25.1) |
+| `["ubuntu-min-24.5" "24.5-min" "24-min"]` | [Dockerfile](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-min-24.5) |
+| `["ubuntu-min-24.4" "24.4-min"]` | [Dockerfile](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-min-24.4) |
+| `["ubuntu-min-24.3" "24.3-min"]` | [Dockerfile](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-min-24.3) |
+| `["ubuntu-min-24.2" "24.2-min"]` | [Dockerfile](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-min-24.2) |
+| `["ubuntu-min-24.1" "24.1-min"]` | [Dockerfile](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-min-24.1) |
+| `["ubuntu-min-23.4" "23.4-min" "23-min"]` | [Dockerfile](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-min-23.4) |
 
 # Usage
 
