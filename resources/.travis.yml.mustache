@@ -24,7 +24,7 @@ install:
   - make .make/build-${TARGET_IMAGE}
 
 script:
-  - docker login --username=${DOCKER_PASSWORD} --password=${DOCKER_USERNAME}
+  - docker login --username=${DOCKER_USERNAME} --password=${DOCKER_PASSWORD}
   - make .make/push-${TARGET_IMAGE}
 
 # after_success:

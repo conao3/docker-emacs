@@ -27,9 +27,11 @@ push: build
 	docker container run -it conao3/emacs:$* emacs --batch --eval "(print emacs-version)"
 	touch $@
 
+# docker tag conao3/emacs:{{id}} conao3/emacs:{{new_id}}
+
 {{#data}}
 .make/push-{{id}}: .make/build-{{id}}
-	docker push conao3/emacs:$*
+	docker push conao3/emacs:{{id}}
 {{/data}}
 
 ##################################################

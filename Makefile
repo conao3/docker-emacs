@@ -50,9 +50,60 @@ push: build
 	docker container run -it conao3/emacs:$* emacs --batch --eval "(print emacs-version)"
 	touch $@
 
-.make/push-%: .make/build-%
-	docker push conao3/emacs:$*
+# docker tag conao3/emacs: conao3/emacs:
 
+.make/push-alpine-26.1-normal: .make/build-alpine-26.1-normal
+	docker push conao3/emacs:alpine-26.1-normal
+.make/push-alpine-25.3-normal: .make/build-alpine-25.3-normal
+	docker push conao3/emacs:alpine-25.3-normal
+.make/push-alpine-25.2-normal: .make/build-alpine-25.2-normal
+	docker push conao3/emacs:alpine-25.2-normal
+.make/push-ubuntu-26.1-normal: .make/build-ubuntu-26.1-normal
+	docker push conao3/emacs:ubuntu-26.1-normal
+.make/push-ubuntu-25.3-normal: .make/build-ubuntu-25.3-normal
+	docker push conao3/emacs:ubuntu-25.3-normal
+.make/push-ubuntu-25.2-normal: .make/build-ubuntu-25.2-normal
+	docker push conao3/emacs:ubuntu-25.2-normal
+.make/push-ubuntu-25.1-normal: .make/build-ubuntu-25.1-normal
+	docker push conao3/emacs:ubuntu-25.1-normal
+.make/push-ubuntu-24.5-normal: .make/build-ubuntu-24.5-normal
+	docker push conao3/emacs:ubuntu-24.5-normal
+.make/push-ubuntu-24.4-normal: .make/build-ubuntu-24.4-normal
+	docker push conao3/emacs:ubuntu-24.4-normal
+.make/push-ubuntu-24.3-normal: .make/build-ubuntu-24.3-normal
+	docker push conao3/emacs:ubuntu-24.3-normal
+.make/push-ubuntu-24.2-normal: .make/build-ubuntu-24.2-normal
+	docker push conao3/emacs:ubuntu-24.2-normal
+.make/push-ubuntu-24.1-normal: .make/build-ubuntu-24.1-normal
+	docker push conao3/emacs:ubuntu-24.1-normal
+.make/push-ubuntu-23.4-normal: .make/build-ubuntu-23.4-normal
+	docker push conao3/emacs:ubuntu-23.4-normal
+.make/push-alpine-26.1-min: .make/build-alpine-26.1-min
+	docker push conao3/emacs:alpine-26.1-min
+.make/push-alpine-25.3-min: .make/build-alpine-25.3-min
+	docker push conao3/emacs:alpine-25.3-min
+.make/push-alpine-25.2-min: .make/build-alpine-25.2-min
+	docker push conao3/emacs:alpine-25.2-min
+.make/push-ubuntu-26.1-min: .make/build-ubuntu-26.1-min
+	docker push conao3/emacs:ubuntu-26.1-min
+.make/push-ubuntu-25.3-min: .make/build-ubuntu-25.3-min
+	docker push conao3/emacs:ubuntu-25.3-min
+.make/push-ubuntu-25.2-min: .make/build-ubuntu-25.2-min
+	docker push conao3/emacs:ubuntu-25.2-min
+.make/push-ubuntu-25.1-min: .make/build-ubuntu-25.1-min
+	docker push conao3/emacs:ubuntu-25.1-min
+.make/push-ubuntu-24.5-min: .make/build-ubuntu-24.5-min
+	docker push conao3/emacs:ubuntu-24.5-min
+.make/push-ubuntu-24.4-min: .make/build-ubuntu-24.4-min
+	docker push conao3/emacs:ubuntu-24.4-min
+.make/push-ubuntu-24.3-min: .make/build-ubuntu-24.3-min
+	docker push conao3/emacs:ubuntu-24.3-min
+.make/push-ubuntu-24.2-min: .make/build-ubuntu-24.2-min
+	docker push conao3/emacs:ubuntu-24.2-min
+.make/push-ubuntu-24.1-min: .make/build-ubuntu-24.1-min
+	docker push conao3/emacs:ubuntu-24.1-min
+.make/push-ubuntu-23.4-min: .make/build-ubuntu-23.4-min
+	docker push conao3/emacs:ubuntu-23.4-min
 ##################################################
 
 $(DIRS):
