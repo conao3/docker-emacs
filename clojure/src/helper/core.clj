@@ -94,7 +94,7 @@
   [{:keys [os tags version branch type], :as option}]
   ;; (render "Hello, {{name}}!" {:name version})
   (let [readfile  (format "Dockerfile-%s.mustache" os)
-        writefile (format "../Dockerfiles/Dockerfile-%s-%s-%s" os version type)]
+        writefile (format "../Dockerfiles/Dockerfile-%s-%s-%s" os type version)]
     (spit writefile
           (render-resource readfile option))
     (println (format "Wrote %s" writefile))))
@@ -118,7 +118,7 @@
     (doseq [os      param-os
             type    param-type
             version param-version]
-      (when-let [it (some #(when (= (:id %) (join "-" [os version type])) %) data)]
+      (when-let [it (some #(when (= (:id %) (join "-" [os type version])) %) data)]
         (gen-dockerfiles it)))
 
     ;; generate readme

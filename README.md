@@ -17,32 +17,32 @@ This project provides different docker images:
 
 | Tags         | Dockerfile |
 |--------------|------------|
-| `[{:tag-name "alpine-26.1-normal"} {:tag-name "alpine-26.1"} {:tag-name "26.1-alpine"}]` | [(Dockerfiles/Dockerfile-alpine-26.1-normal)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-alpine-26.1-normal) |
-| `[{:tag-name "alpine-25.3-normal"} {:tag-name "alpine-25.3"} {:tag-name "25.3-alpine"}]` | [(Dockerfiles/Dockerfile-alpine-25.3-normal)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-alpine-25.3-normal) |
-| `[{:tag-name "alpine-25.2-normal"} {:tag-name "alpine-25.2"} {:tag-name "25.2-alpine"}]` | [(Dockerfiles/Dockerfile-alpine-25.2-normal)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-alpine-25.2-normal) |
-| `[{:tag-name "ubuntu-26.1-normal"} {:tag-name "ubuntu-26.1"} {:tag-name "26.1"}]` | [(Dockerfiles/Dockerfile-ubuntu-26.1-normal)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-26.1-normal) |
-| `[{:tag-name "ubuntu-25.3-normal"} {:tag-name "ubuntu-25.3"} {:tag-name "25.3"}]` | [(Dockerfiles/Dockerfile-ubuntu-25.3-normal)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-25.3-normal) |
-| `[{:tag-name "ubuntu-25.2-normal"} {:tag-name "ubuntu-25.2"} {:tag-name "25.2"}]` | [(Dockerfiles/Dockerfile-ubuntu-25.2-normal)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-25.2-normal) |
-| `[{:tag-name "ubuntu-25.1-normal"} {:tag-name "ubuntu-25.1"} {:tag-name "25.1"}]` | [(Dockerfiles/Dockerfile-ubuntu-25.1-normal)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-25.1-normal) |
-| `[{:tag-name "ubuntu-24.5-normal"} {:tag-name "ubuntu-24.5"} {:tag-name "24.5"}]` | [(Dockerfiles/Dockerfile-ubuntu-24.5-normal)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-24.5-normal) |
-| `[{:tag-name "ubuntu-24.4-normal"} {:tag-name "ubuntu-24.4"} {:tag-name "24.4"}]` | [(Dockerfiles/Dockerfile-ubuntu-24.4-normal)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-24.4-normal) |
-| `[{:tag-name "ubuntu-24.3-normal"} {:tag-name "ubuntu-24.3"} {:tag-name "24.3"}]` | [(Dockerfiles/Dockerfile-ubuntu-24.3-normal)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-24.3-normal) |
-| `[{:tag-name "ubuntu-24.2-normal"} {:tag-name "ubuntu-24.2"} {:tag-name "24.2"}]` | [(Dockerfiles/Dockerfile-ubuntu-24.2-normal)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-24.2-normal) |
-| `[{:tag-name "ubuntu-24.1-normal"} {:tag-name "ubuntu-24.1"} {:tag-name "24.1"}]` | [(Dockerfiles/Dockerfile-ubuntu-24.1-normal)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-24.1-normal) |
-| `[{:tag-name "ubuntu-23.4-normal"} {:tag-name "ubuntu-23.4"} {:tag-name "23.4"}]` | [(Dockerfiles/Dockerfile-ubuntu-23.4-normal)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-23.4-normal) |
-| `[{:tag-name "alpine-26.1-min"} {:tag-name "26.1-alpine-min"}]` | [(Dockerfiles/Dockerfile-alpine-26.1-min)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-alpine-26.1-min) |
-| `[{:tag-name "alpine-25.3-min"} {:tag-name "25.3-alpine-min"}]` | [(Dockerfiles/Dockerfile-alpine-25.3-min)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-alpine-25.3-min) |
-| `[{:tag-name "alpine-25.2-min"} {:tag-name "25.2-alpine-min"}]` | [(Dockerfiles/Dockerfile-alpine-25.2-min)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-alpine-25.2-min) |
-| `[{:tag-name "ubuntu-26.1-min"} {:tag-name "26.1-min"}]` | [(Dockerfiles/Dockerfile-ubuntu-26.1-min)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-26.1-min) |
-| `[{:tag-name "ubuntu-25.3-min"} {:tag-name "25.3-min"}]` | [(Dockerfiles/Dockerfile-ubuntu-25.3-min)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-25.3-min) |
-| `[{:tag-name "ubuntu-25.2-min"} {:tag-name "25.2-min"}]` | [(Dockerfiles/Dockerfile-ubuntu-25.2-min)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-25.2-min) |
-| `[{:tag-name "ubuntu-25.1-min"} {:tag-name "25.1-min"}]` | [(Dockerfiles/Dockerfile-ubuntu-25.1-min)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-25.1-min) |
-| `[{:tag-name "ubuntu-24.5-min"} {:tag-name "24.5-min"}]` | [(Dockerfiles/Dockerfile-ubuntu-24.5-min)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-24.5-min) |
-| `[{:tag-name "ubuntu-24.4-min"} {:tag-name "24.4-min"}]` | [(Dockerfiles/Dockerfile-ubuntu-24.4-min)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-24.4-min) |
-| `[{:tag-name "ubuntu-24.3-min"} {:tag-name "24.3-min"}]` | [(Dockerfiles/Dockerfile-ubuntu-24.3-min)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-24.3-min) |
-| `[{:tag-name "ubuntu-24.2-min"} {:tag-name "24.2-min"}]` | [(Dockerfiles/Dockerfile-ubuntu-24.2-min)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-24.2-min) |
-| `[{:tag-name "ubuntu-24.1-min"} {:tag-name "24.1-min"}]` | [(Dockerfiles/Dockerfile-ubuntu-24.1-min)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-24.1-min) |
-| `[{:tag-name "ubuntu-23.4-min"} {:tag-name "23.4-min"}]` | [(Dockerfiles/Dockerfile-ubuntu-23.4-min)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-23.4-min) |
+| `["alpine-26.1-normal" "alpine-26.1" "26.1-alpine"]` | [(Dockerfiles/Dockerfile-alpine-normal-26.1)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-alpine-normal-26.1) |
+| `["alpine-25.3-normal" "alpine-25.3" "25.3-alpine"]` | [(Dockerfiles/Dockerfile-alpine-normal-25.3)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-alpine-normal-25.3) |
+| `["alpine-25.2-normal" "alpine-25.2" "25.2-alpine"]` | [(Dockerfiles/Dockerfile-alpine-normal-25.2)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-alpine-normal-25.2) |
+| `["ubuntu-26.1-normal" "ubuntu-26.1" "26.1"]` | [(Dockerfiles/Dockerfile-ubuntu-normal-26.1)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-normal-26.1) |
+| `["ubuntu-25.3-normal" "ubuntu-25.3" "25.3"]` | [(Dockerfiles/Dockerfile-ubuntu-normal-25.3)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-normal-25.3) |
+| `["ubuntu-25.2-normal" "ubuntu-25.2" "25.2"]` | [(Dockerfiles/Dockerfile-ubuntu-normal-25.2)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-normal-25.2) |
+| `["ubuntu-25.1-normal" "ubuntu-25.1" "25.1"]` | [(Dockerfiles/Dockerfile-ubuntu-normal-25.1)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-normal-25.1) |
+| `["ubuntu-24.5-normal" "ubuntu-24.5" "24.5"]` | [(Dockerfiles/Dockerfile-ubuntu-normal-24.5)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-normal-24.5) |
+| `["ubuntu-24.4-normal" "ubuntu-24.4" "24.4"]` | [(Dockerfiles/Dockerfile-ubuntu-normal-24.4)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-normal-24.4) |
+| `["ubuntu-24.3-normal" "ubuntu-24.3" "24.3"]` | [(Dockerfiles/Dockerfile-ubuntu-normal-24.3)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-normal-24.3) |
+| `["ubuntu-24.2-normal" "ubuntu-24.2" "24.2"]` | [(Dockerfiles/Dockerfile-ubuntu-normal-24.2)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-normal-24.2) |
+| `["ubuntu-24.1-normal" "ubuntu-24.1" "24.1"]` | [(Dockerfiles/Dockerfile-ubuntu-normal-24.1)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-normal-24.1) |
+| `["ubuntu-23.4-normal" "ubuntu-23.4" "23.4"]` | [(Dockerfiles/Dockerfile-ubuntu-normal-23.4)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-normal-23.4) |
+| `["alpine-26.1-min" "26.1-alpine-min"]` | [(Dockerfiles/Dockerfile-alpine-min-26.1)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-alpine-min-26.1) |
+| `["alpine-25.3-min" "25.3-alpine-min"]` | [(Dockerfiles/Dockerfile-alpine-min-25.3)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-alpine-min-25.3) |
+| `["alpine-25.2-min" "25.2-alpine-min"]` | [(Dockerfiles/Dockerfile-alpine-min-25.2)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-alpine-min-25.2) |
+| `["ubuntu-26.1-min" "26.1-min"]` | [(Dockerfiles/Dockerfile-ubuntu-min-26.1)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-min-26.1) |
+| `["ubuntu-25.3-min" "25.3-min"]` | [(Dockerfiles/Dockerfile-ubuntu-min-25.3)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-min-25.3) |
+| `["ubuntu-25.2-min" "25.2-min"]` | [(Dockerfiles/Dockerfile-ubuntu-min-25.2)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-min-25.2) |
+| `["ubuntu-25.1-min" "25.1-min"]` | [(Dockerfiles/Dockerfile-ubuntu-min-25.1)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-min-25.1) |
+| `["ubuntu-24.5-min" "24.5-min"]` | [(Dockerfiles/Dockerfile-ubuntu-min-24.5)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-min-24.5) |
+| `["ubuntu-24.4-min" "24.4-min"]` | [(Dockerfiles/Dockerfile-ubuntu-min-24.4)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-min-24.4) |
+| `["ubuntu-24.3-min" "24.3-min"]` | [(Dockerfiles/Dockerfile-ubuntu-min-24.3)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-min-24.3) |
+| `["ubuntu-24.2-min" "24.2-min"]` | [(Dockerfiles/Dockerfile-ubuntu-min-24.2)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-min-24.2) |
+| `["ubuntu-24.1-min" "24.1-min"]` | [(Dockerfiles/Dockerfile-ubuntu-min-24.1)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-min-24.1) |
+| `["ubuntu-23.4-min" "23.4-min"]` | [(Dockerfiles/Dockerfile-ubuntu-min-23.4)](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-ubuntu-min-23.4) |
 
 # Usage
 
