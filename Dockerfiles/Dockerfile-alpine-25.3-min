@@ -15,7 +15,7 @@
 
 #
 
-# Image from this Dockerfile tagged as #{"alpine-25.3-min 25.3-alpine-min"}
+# Image from this Dockerfile tagged as [{:tag-name "alpine-25.3-min"} {:tag-name "25.3-alpine-min"}]
 
 FROM alpine:3.9 as dev
 

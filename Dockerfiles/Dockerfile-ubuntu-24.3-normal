@@ -15,7 +15,7 @@
 
 #
 
-# Image from this Dockerfile tagged as #{"ubuntu-24.3-normal ubuntu-24.3 24.3"}
+# Image from this Dockerfile tagged as [{:tag-name "ubuntu-24.3-normal"} {:tag-name "ubuntu-24.3"} {:tag-name "24.3"}]
 
 FROM ubuntu:12.04 as dev
 RUN apt-get update

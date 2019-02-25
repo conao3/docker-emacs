@@ -15,7 +15,7 @@
 
 #
 
-# Image from this Dockerfile tagged as #{"ubuntu-24.5-min 24.5-min"}
+# Image from this Dockerfile tagged as [{:tag-name "ubuntu-24.5-min"} {:tag-name "24.5-min"}]
 
 FROM ubuntu:12.04 as dev
 RUN apt-get update
