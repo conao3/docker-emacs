@@ -1,16 +1,2 @@
 # conao3's global .gitignore at
 # http://dotfiles.conao3.com/gitignore
-
-# clojure files
-/target
-/classes
-/checkouts
-profiles.clj
-pom.xml
-pom.xml.asc
-*.jar
-*.class
-/.lein-*
-/.nrepl-port
-.hgignore
-.hg/
