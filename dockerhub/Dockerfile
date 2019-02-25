@@ -1,1 +1,0 @@
-../Dockerfiles/Dockerfile-alpine-26.1-min
