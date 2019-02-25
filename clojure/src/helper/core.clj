@@ -94,7 +94,7 @@
   [{:keys [os tags version branch type], :as option}]
   ;; (render "Hello, {{name}}!" {:name version})
   (let [readfile  (format "Dockerfile-%s.mustache" os)
-        writefile (format "Dockerfiles/Dockerfile-%s-%s-%s" os version type)]
+        writefile (format "../Dockerfiles/Dockerfile-%s-%s-%s" os version type)]
     (spit writefile
           (render-resource readfile (merge option
                                            {(keyword type) true})))
@@ -126,17 +126,17 @@
                           param-type)) param-version)) param-os)
 
     ;; generate readme
-    (spit "README.md"
+    (spit "../README.md"
           (render-resource "README.md.mustache" {:data data}))
     (println (format "Wrote README.md" os version type))
 
     ;; generate .travis.yml
-    (spit ".travis.yml"
+    (spit "../.travis.yml"
           (render-resource ".travis.yml.mustache" {:data data}))
     (println (format "Wrote .travis.yml" os version type))
 
     ;; generate Makefile
-    (spit "Makefile"
+    (spit "../Makefile"
           (render-resource "Makefile.mustache" {:data data}))
     (println (format "Wrote Makefile" os version type))))
 
