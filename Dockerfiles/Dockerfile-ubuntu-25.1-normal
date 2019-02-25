@@ -15,7 +15,7 @@
 
 #
 
-# Image from this Dockerfile tagged as #{"ubuntu-25.1 25.1"}
+# Image from this Dockerfile tagged as #{"ubuntu-25.1-normal ubuntu-25.1 25.1"}
 
 FROM ubuntu:12.04 as dev
 RUN apt-get update
