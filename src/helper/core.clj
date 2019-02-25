@@ -126,9 +126,9 @@
                           param-type)) param-version)) param-os)
 
     ;; generate readme
-    (spit "Readme.md"
-          (render-resource "Readme.md.mustache" {:data data}))
-    (println (format "Wrote Readme.md" os version type))
+    (spit "README.md"
+          (render-resource "README.md.mustache" {:data data}))
+    (println (format "Wrote README.md" os version type))
 
     ;; generate .travis.yml
     (spit ".travis.yml"
