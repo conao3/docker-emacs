@@ -15,7 +15,7 @@
 
 #
 
-# Image from this Dockerfile tagged as [{:tag-name "ubuntu-24.5-min"} {:tag-name "24.5-min"}]
+# Image from this Dockerfile tagged as ["ubuntu-25.3-min" "25.3-min"]
 
 FROM ubuntu:12.04 as dev
 RUN apt-get update
@@ -37,10 +37,10 @@ RUN apt-get install -y libdbus-1-dev
 RUN rm -rf /var/lib/apt/lists/*
 
 WORKDIR /opt
-RUN curl -vLO https://ftp.gnu.org/pub/gnu/emacs/emacs-24.5.tar.gz && \
-tar xf emacs-24.5.tar.gz && \
-mv -v emacs-24.5 emacs && \
-rm emacs-24.5.tar.gz
+RUN curl -vLO https://ftp.gnu.org/pub/gnu/emacs/emacs-25.3.tar.gz && \
+tar xf emacs-25.3.tar.gz && \
+mv -v emacs-25.3 emacs && \
+rm emacs-25.3.tar.gz
 
 WORKDIR /opt/emacs
 RUN ./configure --with-crt-dir=/usr/lib/x86_64-linux-gnu
