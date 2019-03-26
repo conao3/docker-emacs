@@ -1,6 +1,34 @@
-<!-- -*- mode: markdown; -*- -->
+# -*- mode: org; -*-
+#+author: conao3
+#+date: <2018-10-25 Thu>
 
-# Description
+[[https://github.com/conao3/docker-emacs][https://raw.githubusercontent.com/conao3/files/master/header/png/docker-emacs.png]]
+[[https://github.com/conao3/docker-emacs/blob/master/LICENSE][https://img.shields.io/github/license/conao3/docker-emacs.svg?style=flat-square]]
+[[https://github.com/conao3/docker-emacs/releases][https://img.shields.io/github/tag/conao3/docker-emacs.svg?style=flat-square]]
+[[https://travis-ci.org/conao3/docker-emacs][https://img.shields.io/travis/conao3/docker-emacs/master.svg?style=flat-square]]
+[[https://app.codacy.com/project/conao3/docker-emacs/dashboard][https://img.shields.io/codacy/grade/30bdd009cc2f4bb884073720f954a688.svg?logo=codacy&style=flat-square]]
+[[https://www.patreon.com/conao3][https://img.shields.io/badge/patreon-@conao3-orange.svg?logo=patreon&style=flat-square]]
+[[https://twitter.com/conao_3][https://img.shields.io/badge/twitter-@conao__3-blue.svg?logo=twitter&style=flat-square]]
+[[https://join.slack.com/t/conao3-support/shared_invite/enQtNTg2MTY0MjkzOTU0LTFjOTdhOTFiNTM2NmY5YTE5MTNlYzNiOTE2MTZlZWZkNDEzZmRhN2E0NjkwMWViZTZiYjA4MDUxYTUzNDZiNjY][https://img.shields.io/badge/chat-on_slack-blue.svg?logo=slack&style=flat-square]]
+
+* Table of Contents
+- [[#background][Background]]
+- [[#docker-image-tags][Docker Image Tags]]
+- [[#install][Install]]
+- [[#usage][Usage]]
+  - [[#console][Console]]
+  - [[#gui][GUI]]
+- [[#information][Information]]
+  - [[#donation][Donation]]
+  - [[#community][Community]]
+  - [[#contribution][Contribution]]
+  - [[#alternatives][Alternatives]]
+  - [[#license][License]]
+  - [[#author][Author]]
+  - [[#contributor][Contributor]]
+
+* Background
+This repository hosting coding contest source files.
 
 Run Emacs in docker containers!
 
@@ -13,45 +41,82 @@ This project provides different docker images:
 - The `-alpine` variants (~200MB) follow the same logic as the main images but are based on
   [Alpine Linux](https://alpinelinux.org).
 
-# Tags
-
+* Docker Image Tags
 | Tags         | Dockerfile |
 |--------------|------------|
 {{#data}}
-| `{{{tags}}}` | [Dockerfile](https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-{{id}}) |
+| `{{{tags}}}` | [[https://github.com/conao3/docker-emacs/blob/master/Dockerfiles/Dockerfile-{{id}}][Dockerfile]] |
 {{/data}}
 
-# Usage
+* Install
+Install ~docker~. see docker document.
 
-## Console
+* Usage
+** Console
+#+begin_src bash
+  docker run -it --rm conao3/emacs
+#+end_src
 
-``` shell
-docker run -it --rm silex/emacs
-```
+** GUI
+#+begin_src bash
+  xhost +local:root # WARN: this comes with security issues
+  docker run -it --rm -e DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix conao3/emacs
+#+end_src
 
-## GUI
+* Information
+** Donation
+I love OSS and I am dreaming of working on it as *full-time* job.
 
-``` shell
-xhost +local:root # WARN: this comes with security issues
-docker run -it --rm -e DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix silex/emacs
-```
+*With your support*, I will be able to spend more time at OSS!
 
-# Alternatives
+[[https://www.patreon.com/conao3][https://c5.patreon.com/external/logo/become_a_patron_button.png]]
 
-- [flycheck/emacs-cask](https://hub.docker.com/r/flycheck/emacs-cask): collection of docker images containing a
-  minimal Emacs compiled from source with Cask.
-- [flycheck/emacs-travis](https://github.com/flycheck/emacs-travis): makefile which provides targets to
-  install Emacs stable and emacs-snapshot, Texinfo and Cask.
-- [jgkamat/airy-docker-emacs](https://github.com/jgkamat/airy-docker-emacs): alpine-based docker images that have
-  Emacs installed through the package manager.
-- [JAremko/docker-emacs](https://github.com/JAremko/docker-emacs): collection of docker images with focus on GUI usage.
-- [rejeep/evm](https://github.com/rejeep/evm): pre-built Emacs binaries.
+** Community
+All feedback and suggestions are welcome!
 
-# Contributions
+You can use github issues, but you can also use [[https://join.slack.com/t/conao3-support/shared_invite/enQtNTg2MTY0MjkzOTU0LTFjOTdhOTFiNTM2NmY5YTE5MTNlYzNiOTE2MTZlZWZkNDEzZmRhN2E0NjkwMWViZTZiYjA4MDUxYTUzNDZiNjY][Slack]]
+if you want a more casual conversation.
+
+** Contribution
+Feel free to send PR!
 
 They are very welcome! The basic workflow is as follow:
 
-- Modify files inside the `/resources` directory.
-- Run `lein run -- gen` to spread the changes everywhere.
+- Modify files inside the ~/resources~ directory.
+- Run ~lein run -- gen~ to spread the changes everywhere.
+- Run ~lein run -- build~ to build docker images.
 
-- Run `lein run -- build` to build docker images.
+** Alternatives
+
+- [[https://hub.docker.com/r/flycheck/emacs-cask][flycheck/emacs-cask]]
+
+  collection of docker images containing a minimal Emacs compiled from source with Cask.
+
+- [[https://github.com/flycheck/emacs-travis][flycheck/emacs-travis]]
+
+  makefile which provides targets to install Emacs stable and emacs-snapshot, Texinfo and Cask.
+
+- [[https://github.com/jgkamat/airy-docker-emacs][jgkamat/airy-docker-emacs]]
+
+  alpine-based docker images that have Emacs installed through the package manager.
+
+- [[https://github.com/JAremko/docker-emacs][JAremko/docker-emacs]]
+
+  collection of docker images with focus on GUI usage.
+
+- [[https://github.com/rejeep/evm][rejeep/evm]]
+
+  pre-built Emacs binaries.
+
+** License
+#+begin_example
+  The MIT License (MIT)
+  Copyright (c) Naoya Yamashita - https://conao3.com
+  https://github.com/conao3/docker-emacs/blob/master/LICENSE
+#+end_example
+
+** Author
+- Naoya Yamashita ([[https://github.com/conao3][conao3]])
+
+** Contributor
+- Not yet... Now send PR and add your name!!
