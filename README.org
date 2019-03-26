@@ -132,14 +132,24 @@ They are very welcome! The basic workflow is as follow:
   pre-built Emacs binaries.
 
 ** License
+*** This repository
 #+begin_example
-  The MIT License (MIT)
+  Affero General Public License Version 3 (AGPLv3)
   Copyright (c) Naoya Yamashita - https://conao3.com
   https://github.com/conao3/docker-emacs/blob/master/LICENSE
 #+end_example
 
+*** Fork source repository
+[[https://github.com/Silex/docker-emacs][Silex/docker-emacs]]
+#+begin_example
+  General Public License Version 3 (GPLv3)
+  Copyright (c) Silex
+  https://github.com/Silex/docker-emacs/blob/master/LICENSE
+#+end_example
+
 ** Author
 - Naoya Yamashita ([[https://github.com/conao3][conao3]])
+- Philippe Vaucher ([[https://github.com/Silex/docker-emacs][Silex]])
 
 ** Contributor
 - Not yet... Now send PR and add your name!!
