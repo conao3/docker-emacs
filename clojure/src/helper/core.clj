@@ -122,9 +122,9 @@
         (gen-dockerfiles it)))
 
     ;; generate readme
-    (spit "../README.md"
-          (render-resource "README.md.mustache" {:data data}))
-    (println (format "Wrote README.md" os version type))
+    (spit "../README.org"
+          (render-resource "README.org.mustache" {:data data}))
+    (println (format "Wrote README.org" os version type))
 
     ;; generate .travis.yml
     (spit "../.travis.yml"
