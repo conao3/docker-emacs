@@ -15,9 +15,11 @@ services: docker
 #     - $HOME/cache
 
 env:
+  - TARGET_IMAGE="alpine-std-26.2"
   - TARGET_IMAGE="alpine-std-26.1"
   - TARGET_IMAGE="alpine-std-25.3"
   - TARGET_IMAGE="alpine-std-25.2"
+  - TARGET_IMAGE="ubuntu-std-26.2"
   - TARGET_IMAGE="ubuntu-std-26.1"
   - TARGET_IMAGE="ubuntu-std-25.3"
   - TARGET_IMAGE="ubuntu-std-25.2"
@@ -28,9 +30,11 @@ env:
   - TARGET_IMAGE="ubuntu-std-24.2"
   - TARGET_IMAGE="ubuntu-std-24.1"
   - TARGET_IMAGE="ubuntu-std-23.4"
+  - TARGET_IMAGE="alpine-min-26.2"
   - TARGET_IMAGE="alpine-min-26.1"
   - TARGET_IMAGE="alpine-min-25.3"
   - TARGET_IMAGE="alpine-min-25.2"
+  - TARGET_IMAGE="ubuntu-min-26.2"
   - TARGET_IMAGE="ubuntu-min-26.1"
   - TARGET_IMAGE="ubuntu-min-25.3"
   - TARGET_IMAGE="ubuntu-min-25.2"

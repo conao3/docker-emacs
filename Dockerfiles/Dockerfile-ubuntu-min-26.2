@@ -15,7 +15,7 @@
 
 #
 
-# Image from this Dockerfile tagged as ["ubuntu-min-26.1" "26.1-min"]
+# Image from this Dockerfile tagged as ["ubuntu-min-26.2" "26.2-min" "26-min"]
 
 FROM ubuntu:12.04 as dev
 RUN apt-get update
@@ -37,10 +37,10 @@ RUN apt-get install -y libdbus-1-dev
 RUN rm -rf /var/lib/apt/lists/*
 
 WORKDIR /opt
-RUN curl -vLO https://ftp.gnu.org/pub/gnu/emacs/emacs-26.1.tar.gz && \
-tar xf emacs-26.1.tar.gz && \
-mv -v emacs-26.1 emacs && \
-rm emacs-26.1.tar.gz
+RUN curl -vLO https://ftp.gnu.org/pub/gnu/emacs/emacs-26.2.tar.gz && \
+tar xf emacs-26.2.tar.gz && \
+mv -v emacs-26.2 emacs && \
+rm emacs-26.2.tar.gz
 
 WORKDIR /opt/emacs
 RUN ./configure --with-crt-dir=/usr/lib/x86_64-linux-gnu

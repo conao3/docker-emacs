@@ -15,12 +15,16 @@
 
 #
 
-# Image from this Dockerfile tagged as ["ubuntu-min-26.1" "26.1-min"]
+# Image from this Dockerfile tagged as ["ubuntu-std-26.2" "26.2-std" "26.2" "26-std" "26"]
 
 FROM ubuntu:12.04 as dev
 RUN apt-get update
 RUN apt-get install -y build-essential
 
+RUN apt-get install -y libx11-dev
+RUN apt-get install -y libcanberra-gtk-module
+RUN apt-get install -y libgtk2.0-dev
+RUN apt-get install -y libgpm-dev
 RUN apt-get install -y libncurses-dev
 
 RUN apt-get install -y autoconf
@@ -32,15 +36,22 @@ RUN apt-get install -y gnupg
 RUN apt-get install -y openssh-client
 RUN apt-get install -y libgnutls-dev
 
+RUN apt-get install -y imagemagick
+RUN apt-get install -y libmagick++-dev
+RUN apt-get install -y libxpm-dev
+RUN apt-get install -y libgif-dev
+RUN apt-get install -y libjpeg-dev
+RUN apt-get install -y libpng-dev
+RUN apt-get install -y libtiff-dev
 RUN apt-get install -y libdbus-1-dev
 
 RUN rm -rf /var/lib/apt/lists/*
 
 WORKDIR /opt
-RUN curl -vLO https://ftp.gnu.org/pub/gnu/emacs/emacs-26.1.tar.gz && \
-tar xf emacs-26.1.tar.gz && \
-mv -v emacs-26.1 emacs && \
-rm emacs-26.1.tar.gz
+RUN curl -vLO https://ftp.gnu.org/pub/gnu/emacs/emacs-26.2.tar.gz && \
+tar xf emacs-26.2.tar.gz && \
+mv -v emacs-26.2 emacs && \
+rm emacs-26.2.tar.gz
 
 WORKDIR /opt/emacs
 RUN ./configure --with-crt-dir=/usr/lib/x86_64-linux-gnu
@@ -53,6 +64,9 @@ FROM ubuntu:12.04
 
 RUN apt-get update
 
+RUN apt-get install -y libx11-6
+RUN apt-get install -y libgtk2.0-0
+RUN apt-get install -y libcanberra-gtk-module
 RUN apt-get install -y libncurses5
 
 RUN apt-get install -y curl
@@ -63,6 +77,13 @@ RUN apt-get install -y libsm6
 RUN apt-get install -y openssh-client
 RUN apt-get install -y texinfo
 
+RUN apt-get install -y imagemagick
+RUN apt-get install -y libmagick++4
+RUN apt-get install -y libgif4
+RUN apt-get install -y libjpeg8
+RUN apt-get install -y libxpm4
+RUN apt-get install -y libtiff4
+RUN apt-get install -y libpng12-0
 RUN rm -rf /var/lib/apt/lists/*
 
 COPY --from=0 /usr/local /usr/local
