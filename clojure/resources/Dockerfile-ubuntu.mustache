@@ -100,6 +100,9 @@ RUN apt-get install -y libtiff4
 RUN apt-get install -y libpng12-0
 {{/min}}
 
+# make does not need emacs, but we need it for testing like `make test`
+RUN apt-get install -y make
+
 RUN rm -rf /var/lib/apt/lists/*
 
 COPY --from=0 /usr/local /usr/local
