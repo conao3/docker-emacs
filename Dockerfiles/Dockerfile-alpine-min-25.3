@@ -55,6 +55,9 @@ RUN apk add curl
 RUN apk add gnupg
 RUN apk add openssh-client
 
+# make does not need emacs, but we need it for testing like `make test`
+RUN apk add make
+
 COPY --from=0 /usr/local /usr/local
 
 CMD ["emacs"]
