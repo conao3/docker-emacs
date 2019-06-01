@@ -12,7 +12,7 @@
 [[https://conao3-support.slack.com/join/shared_invite/enQtNjUzMDMxODcyMjE1LWUwMjhiNTU3Yjk3ODIwNzAxMTgwOTkxNmJiN2M4OTZkMWY0NjI4ZTg4MTVlNzcwNDY2ZjVjYmRiZmJjZDU4MDE][https://img.shields.io/badge/chat-on_slack-blue.svg?logo=slack&style=flat-square]]
 
 * Table of Contents
-- [[#background][Background]]
+- [[#description][Description]]
 - [[#docker-image-tags][Docker Image Tags]]
 - [[#install][Install]]
 - [[#usage][Usage]]
@@ -27,7 +27,7 @@
   - [[#author][Author]]
   - [[#contributor][Contributor]]
 
-* Background
+* Description
 This repository hosting coding contest source files.
 
 Run Emacs in docker containers!
